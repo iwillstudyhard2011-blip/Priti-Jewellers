@@ -5,23 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Priti Jewellers</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
 <style>
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-    background: #fffaf7;
+    background: #0f0f0f;
+    color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* HEADER */
 header {
-    background: #6b0000;
-    color: white;
-    padding: 15px 40px;
+    background: black;
+    padding: 15px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,15 +35,20 @@ header {
 }
 
 .logo img {
-    height: 50px;
-    margin-right: 10px;
+    height: 75px;
+    margin-right: 15px;
 }
 
+.logo h1 {
+    font-family: 'Playfair Display', serif;
+    color: gold;
+}
+
+/* NAV */
 nav a {
     color: white;
     margin-left: 15px;
     text-decoration: none;
-    font-weight: 500;
 }
 
 .insta-btn { background:#ff4d6d; padding:8px 12px; border-radius:5px; }
@@ -74,21 +81,21 @@ nav a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    font-size: 40px;
     background: rgba(0,0,0,0.6);
     padding: 20px;
-    font-size: 40px;
 }
 
 /* PRODUCTS */
 .products {
-    padding: 60px 30px;
+    padding: 60px;
     text-align: center;
 }
 
 .products h2 {
+    font-family: 'Playfair Display', serif;
+    color: gold;
     margin-bottom: 30px;
-    font-size: 32px;
 }
 
 .product-grid {
@@ -98,15 +105,14 @@ nav a {
 }
 
 .product {
-    background: white;
+    background: #1a1a1a;
     padding: 20px;
     border-radius: 12px;
     transition: 0.3s;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .product:hover {
-    transform: translateY(-5px);
+    transform: scale(1.05);
 }
 
 .product img {
@@ -114,31 +120,21 @@ nav a {
     border-radius: 10px;
 }
 
-.product h3 {
-    margin: 10px 0;
-}
-
-.product p {
-    font-weight: bold;
-}
-
-/* BUTTON */
 button {
-    background: #25D366;
-    color: white;
+    background: gold;
+    color: black;
     border: none;
-    padding: 10px 18px;
+    padding: 10px;
     margin-top: 10px;
-    border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 /* FOOTER */
 footer {
-    background: #6b0000;
-    color: white;
-    text-align: center;
+    background: black;
     padding: 20px;
+    text-align: center;
 }
 </style>
 </head>
@@ -161,17 +157,11 @@ footer {
     </nav>
 </header>
 
-<!-- SLIDESHOW -->
+<!-- SLIDESHOW (ONLY YOUR IMAGES) -->
 <section class="slideshow">
-    <div class="slide active">
-        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338">
-    </div>
-    <div class="slide">
-        <img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6">
-    </div>
-    <div class="slide">
-        <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad">
-    </div>
+    <div class="slide active"><img src="shop1.png"></div>
+    <div class="slide"><img src="shop2.png"></div>
+    <div class="slide"><img src="shop3.png"></div>
 
     <div class="hero-text">Welcome to Priti Jewellers ✨</div>
 </section>
@@ -187,25 +177,25 @@ footer {
 <h3>Gold Necklace</h3>
 <p>₹12,999</p>
 <a href="https://wa.me/919422839306?text=I%20want%20to%20buy%20Gold%20Necklace" target="_blank">
-<button>Order on WhatsApp</button>
+<button>Order</button>
 </a>
 </div>
 
 <div class="product">
-<img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad">
-<h3>Diamond Ring</h3>
-<p>₹25,499</p>
-<a href="https://wa.me/919422839306?text=I%20want%20to%20buy%20Diamond%20Ring" target="_blank">
-<button>Order on WhatsApp</button>
+<img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f">
+<h3>Gold Earrings</h3>
+<p>₹8,999</p>
+<a href="https://wa.me/919422839306?text=I%20want%20to%20buy%20Gold%20Earrings" target="_blank">
+<button>Order</button>
 </a>
 </div>
 
 <div class="product">
 <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d">
-<h3>Silver Bracelet</h3>
+<h3>Bracelet</h3>
 <p>₹4,999</p>
-<a href="https://wa.me/919422839306?text=I%20want%20to%20buy%20Silver%20Bracelet" target="_blank">
-<button>Order on WhatsApp</button>
+<a href="https://wa.me/919422839306?text=I%20want%20to%20buy%20Bracelet" target="_blank">
+<button>Order</button>
 </a>
 </div>
 
@@ -214,15 +204,13 @@ footer {
 
 <section class="products" id="contact">
 <h2>Contact Us</h2>
-<p>Phone / WhatsApp: +91 94228 39306</p>
-<p>Email: support@pritijewellers.com</p>
+<p>WhatsApp: +91 94228 39306</p>
 </section>
 
 <footer>
 <p>© 2026 Priti Jewellers</p>
 </footer>
 
-<!-- AUTO SLIDE -->
 <script>
 let slides = document.querySelectorAll(".slide");
 let i = 0;
