@@ -10,15 +10,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-    background-color: #fff8f5;
+    background: #fffaf7;
 }
 
+/* HEADER */
 header {
-    background: #8b0000;
+    background: #6b0000;
     color: white;
     padding: 15px 40px;
     display: flex;
@@ -40,7 +41,7 @@ nav a {
     color: white;
     margin-left: 15px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .insta-btn { background:#ff4d6d; padding:8px 12px; border-radius:5px; }
@@ -50,7 +51,6 @@ nav a {
 .slideshow {
     position: relative;
     height: 80vh;
-    overflow: hidden;
 }
 
 .slide {
@@ -58,7 +58,7 @@ nav a {
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: opacity 1s;
+    transition: 1s;
 }
 
 .slide img {
@@ -67,9 +67,7 @@ nav a {
     object-fit: cover;
 }
 
-.active {
-    opacity: 1;
-}
+.active { opacity: 1; }
 
 .hero-text {
     position: absolute;
@@ -77,37 +75,67 @@ nav a {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.6);
     padding: 20px;
     font-size: 40px;
 }
 
 /* PRODUCTS */
 .products {
-    padding: 50px;
+    padding: 60px 30px;
     text-align: center;
+}
+
+.products h2 {
+    margin-bottom: 30px;
+    font-size: 32px;
 }
 
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    gap: 20px;
+    gap: 25px;
 }
 
 .product {
     background: white;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
+    transition: 0.3s;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.product:hover {
+    transform: translateY(-5px);
 }
 
 .product img {
     width: 100%;
+    border-radius: 10px;
+}
+
+.product h3 {
+    margin: 10px 0;
+}
+
+.product p {
+    font-weight: bold;
+}
+
+/* BUTTON */
+button {
+    background: #25D366;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* FOOTER */
 footer {
-    background: #8b0000;
+    background: #6b0000;
     color: white;
     text-align: center;
     padding: 20px;
@@ -135,56 +163,74 @@ footer {
 
 <!-- SLIDESHOW -->
 <section class="slideshow">
-    <div class="slide active"><img src="shop1.png"></div>
-    <div class="slide"><img src="shop2.png"></div>
-    <div class="slide"><img src="shop3.png"></div>
+    <div class="slide active">
+        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338">
+    </div>
+    <div class="slide">
+        <img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6">
+    </div>
+    <div class="slide">
+        <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad">
+    </div>
 
     <div class="hero-text">Welcome to Priti Jewellers ✨</div>
 </section>
 
+<!-- PRODUCTS -->
 <section class="products" id="products">
-    <h2>Our Collection</h2>
+<h2>Our Collection</h2>
 
-    <div class="product-grid">
-        <div class="product">
-            <img src="https://images.unsplash.com/photo-1602752250015-52934bc45613">
-            <h3>Gold Necklace</h3>
-            <p>₹12,999</p>
-        </div>
+<div class="product-grid">
 
-        <div class="product">
-            <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad">
-            <h3>Diamond Ring</h3>
-            <p>₹25,499</p>
-        </div>
+<div class="product">
+<img src="https://images.unsplash.com/photo-1602752250015-52934bc45613">
+<h3>Gold Necklace</h3>
+<p>₹12,999</p>
+<a href="https://wa.me/919422839306?text=I%20want%20to%20buy%20Gold%20Necklace" target="_blank">
+<button>Order on WhatsApp</button>
+</a>
+</div>
 
-        <div class="product">
-            <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d">
-            <h3>Silver Bracelet</h3>
-            <p>₹4,999</p>
-        </div>
-    </div>
+<div class="product">
+<img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad">
+<h3>Diamond Ring</h3>
+<p>₹25,499</p>
+<a href="https://wa.me/919422839306?text=I%20want%20to%20buy%20Diamond%20Ring" target="_blank">
+<button>Order on WhatsApp</button>
+</a>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d">
+<h3>Silver Bracelet</h3>
+<p>₹4,999</p>
+<a href="https://wa.me/919422839306?text=I%20want%20to%20buy%20Silver%20Bracelet" target="_blank">
+<button>Order on WhatsApp</button>
+</a>
+</div>
+
+</div>
 </section>
 
 <section class="products" id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: support@pritijewellers.com</p>
-    <p>Phone: +91 9876543210</p>
+<h2>Contact Us</h2>
+<p>Phone / WhatsApp: +91 94228 39306</p>
+<p>Email: support@pritijewellers.com</p>
 </section>
 
 <footer>
-    <p>© 2026 Priti Jewellers</p>
+<p>© 2026 Priti Jewellers</p>
 </footer>
 
-<!-- JAVASCRIPT FOR AUTO SLIDE -->
+<!-- AUTO SLIDE -->
 <script>
 let slides = document.querySelectorAll(".slide");
-let index = 0;
+let i = 0;
 
 setInterval(() => {
-    slides[index].classList.remove("active");
-    index = (index + 1) % slides.length;
-    slides[index].classList.add("active");
+    slides[i].classList.remove("active");
+    i = (i + 1) % slides.length;
+    slides[i].classList.add("active");
 }, 3000);
 </script>
 
