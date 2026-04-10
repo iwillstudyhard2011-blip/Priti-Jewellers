@@ -43,9 +43,13 @@ header {
 /* NAV */
 nav a {
     color:white;
-    margin-left:15px;
+    margin-left:12px;
     text-decoration:none;
+    padding:6px 10px;
 }
+
+.insta-btn { background:#ff4d6d; border-radius:5px; }
+.map-btn { background:#007bff; border-radius:5px; }
 
 /* SLIDESHOW */
 .slideshow {
@@ -81,37 +85,54 @@ nav a {
 
 /* PRODUCTS */
 .products {
-    padding:60px;
+    padding:60px 30px;
     text-align:center;
 }
 
 .products h2 {
     color:gold;
     margin-bottom:30px;
+    font-family:'Playfair Display', serif;
 }
 
 .product-grid {
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
 }
 
 .product {
     background:#1a1a1a;
     padding:20px;
-    border-radius:10px;
+    border-radius:15px;
+    transition:0.3s;
+    box-shadow:0 0 10px rgba(255,215,0,0.1);
+}
+
+.product:hover {
+    transform:translateY(-10px);
+    box-shadow:0 0 20px rgba(255,215,0,0.4);
 }
 
 .product img {
     width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:12px;
 }
 
+.product h3 {
+    margin-top:15px;
+}
+
+/* BUTTON */
 button {
-    background:gold;
+    background:linear-gradient(45deg,gold,orange);
     color:black;
     border:none;
-    padding:10px;
+    padding:10px 18px;
     margin-top:10px;
+    border-radius:25px;
     cursor:pointer;
 }
 
@@ -136,6 +157,9 @@ footer {
 <a href="#">Home</a>
 <a href="#products">Shop</a>
 <a href="#contact">Contact</a>
+
+<a href="https://www.instagram.com/pritijewellers_/" target="_blank" class="insta-btn">Instagram</a>
+<a href="https://maps.app.goo.gl/J6nWHvYyZNvwuSk3A" target="_blank" class="map-btn">Location</a>
 </nav>
 </header>
 
@@ -158,15 +182,15 @@ footer {
 <img src="https://images.unsplash.com/photo-1602752250015-52934bc45613">
 <h3>Gold Necklace</h3>
 <a href="https://wa.me/919422839306?text=I%20want%20Gold%20Necklace" target="_blank">
-<button>Order</button>
+<button>Order Now</button>
 </a>
 </div>
 
 <div class="product">
-<img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad">
+<img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f">
 <h3>Diamond Ring</h3>
 <a href="https://wa.me/919422839306?text=I%20want%20Diamond%20Ring" target="_blank">
-<button>Order</button>
+<button>Order Now</button>
 </a>
 </div>
 
@@ -174,7 +198,7 @@ footer {
 <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d">
 <h3>Bracelet</h3>
 <a href="https://wa.me/919422839306?text=I%20want%20Bracelet" target="_blank">
-<button>Order</button>
+<button>Order Now</button>
 </a>
 </div>
 
