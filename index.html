@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Priti Jewellers</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #fff8f5;
+}
+
+header {
+    background: #8b0000;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.insta-btn { background:#ff4d6d; padding:8px 12px; border-radius:5px; }
+.map-btn { background:#007bff; padding:8px 12px; border-radius:5px; }
+
+/* SLIDESHOW */
+.slideshow {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.active {
+    opacity: 1;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+    font-size: 40px;
+}
+
+/* PRODUCTS */
+.products {
+    padding: 50px;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+}
+
+.product {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.product img {
+    width: 100%;
+}
+
+/* FOOTER */
+footer {
+    background: #8b0000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo.jpg">
+        <h1>Priti Jewellers</h1>
+    </div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#products">Shop</a>
+        <a href="#contact">Contact</a>
+
+        <a href="https://www.instagram.com/pritijewellers_/" target="_blank" class="insta-btn">Instagram</a>
+        <a href="https://maps.app.goo.gl/J6nWHvYyZNvwuSk3A" target="_blank" class="map-btn">Location</a>
+    </nav>
+</header>
+
+<!-- SLIDESHOW -->
+<section class="slideshow">
+    <div class="slide active"><img src="shop1.png"></div>
+    <div class="slide"><img src="shop2.png"></div>
+    <div class="slide"><img src="shop3.png"></div>
+
+    <div class="hero-text">Welcome to Priti Jewellers ✨</div>
+</section>
+
+<section class="products" id="products">
+    <h2>Our Collection</h2>
+
+    <div class="product-grid">
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1602752250015-52934bc45613">
+            <h3>Gold Necklace</h3>
+            <p>₹12,999</p>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad">
+            <h3>Diamond Ring</h3>
+            <p>₹25,499</p>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d">
+            <h3>Silver Bracelet</h3>
+            <p>₹4,999</p>
+        </div>
+    </div>
+</section>
+
+<section class="products" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@pritijewellers.com</p>
+    <p>Phone: +91 9876543210</p>
+</section>
+
+<footer>
+    <p>© 2026 Priti Jewellers</p>
+</footer>
+
+<!-- JAVASCRIPT FOR AUTO SLIDE -->
+<script>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+}, 3000);
+</script>
+
+</body>
+</html>
