@@ -43,7 +43,7 @@ header {
 /* NAV */
 nav a {
     color:white;
-    margin-left:12px;
+    margin-left:10px;
     text-decoration:none;
     padding:6px 10px;
 }
@@ -121,10 +121,6 @@ nav a {
     border-radius:12px;
 }
 
-.product h3 {
-    margin-top:15px;
-}
-
 /* BUTTON */
 button {
     background:linear-gradient(45deg,gold,orange);
@@ -134,6 +130,20 @@ button {
     margin-top:10px;
     border-radius:25px;
     cursor:pointer;
+}
+
+/* FLOATING WHATSAPP */
+.whatsapp {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    font-size:22px;
+    padding:15px 18px;
+    border-radius:50%;
+    text-decoration:none;
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
 }
 
 /* FOOTER */
@@ -213,6 +223,9 @@ footer {
 <footer>
 <p>© 2026 Priti Jewellers</p>
 </footer>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/919422839306" target="_blank" class="whatsapp">💬</a>
 
 <script>
 let slides=document.querySelectorAll(".slide");
