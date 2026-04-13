@@ -3,11 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Priti Jewellers | Hallmarked Gold & Diamond Jewellery</title>
+    
+    <meta name="google-site-verification" content="mpkAe-im1mV3eW6RkPzGhnD7MKk0S7U8du7LFjkz8nc" />
+
+    <title>Priti Jewellers | Best Gold & Diamond Jewellery in Brahmapuri</title>
+    <meta name="description" content="Priti Jewellers Brahmapuri offers HUID & BIS Hallmarked gold, certified diamonds, and custom jewellery. Visit us at Sarafa Bazar for guaranteed buyback and lifetime exchange.">
+    <meta name="keywords" content="Priti Jewellers, Jewellery Shop Brahmapuri, Gold Jewellery Nagpur, BIS Hallmarked Gold, Diamond Rings Brahmapuri, Sarafa Bazar Brahmapuri">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "JewelryStore",
+      "name": "Priti Jewellers",
+      "image": "https://yourusername.github.io/logo.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sarafa Bazar Road, Gujri Ward, Churhe Bada",
+        "addressLocality": "Brahmapuri",
+        "addressRegion": "MH",
+        "postalCode": "441206",
+        "addressCountry": "IN"
+      },
+      "telephone": "+919422839306",
+      "url": "https://yourusername.github.io/"
+    }
+    </script>
     
     <link rel="icon" type="image/png" href="favicon.png">
-
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --gold: #d4af37;
@@ -24,6 +48,7 @@
             background: #0a0a0a;
             color: #f5f5f5;
             font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
         }
 
         /* HEADER */
@@ -78,15 +103,8 @@
             color: var(--gold);
         }
 
-        .insta-btn {
-            background: #ff4d6d;
-            color: white !important;
-        }
-
-        .map-btn {
-            background: #007bff;
-            color: white !important;
-        }
+        .insta-btn { background: #ff4d6d; color: white !important; }
+        .map-btn { background: #007bff; color: white !important; }
 
         .nav-icon {
             width: 24px;
@@ -108,9 +126,7 @@
             transition: opacity 1.8s ease;
         }
 
-        .slide.active {
-            opacity: 1;
-        }
+        .slide.active { opacity: 1; }
 
         .slide img {
             width: 100%;
@@ -150,7 +166,7 @@
             letter-spacing: 2px;
         }
 
-        /* WHY CHOOSE US - PROFESSIONAL TRAIN */
+        /* WHY CHOOSE US - TRAIN EFFECT */
         .why-us {
             background: #0a0a0a;
             overflow: hidden;
@@ -163,9 +179,7 @@
             width: max-content;
         }
 
-        .why-us:hover .why-track {
-            animation-play-state: paused;
-        }
+        .why-us:hover .why-track { animation-play-state: paused; }
 
         .why-card {
             background: #1a1a1a;
@@ -174,7 +188,6 @@
             border-radius: 20px;
             border: 1px solid rgba(212, 175, 55, 0.12);
             transition: all 0.4s ease;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
         }
 
         .why-card:hover {
@@ -183,18 +196,7 @@
             box-shadow: 0 20px 50px rgba(212, 175, 55, 0.25);
         }
 
-        .why-card h3 {
-            color: var(--gold);
-            font-size: 24px;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        .why-card p {
-            color: #ddd;
-            font-size: 16px;
-            line-height: 1.8;
-        }
+        .why-card h3 { color: var(--gold); font-size: 24px; margin-bottom: 20px; }
 
         @keyframes trainMove {
             from { transform: translateX(0); }
@@ -215,13 +217,9 @@
             border-radius: 22px;
             overflow: hidden;
             transition: all 0.5s ease;
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
         }
 
-        .product:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 25px 55px rgba(212, 175, 55, 0.3);
-        }
+        .product:hover { transform: translateY(-15px); }
 
         .product img {
             width: 100%;
@@ -230,19 +228,9 @@
             transition: transform 0.7s ease;
         }
 
-        .product:hover img {
-            transform: scale(1.07);
-        }
+        .product:hover img { transform: scale(1.07); }
 
-        .product-content {
-            padding: 28px;
-        }
-
-        .product h3 {
-            color: var(--gold);
-            font-size: 23px;
-            margin-bottom: 20px;
-        }
+        .product-content { padding: 28px; }
 
         button {
             background: linear-gradient(45deg, #d4af37, #f0c14e);
@@ -253,40 +241,23 @@
             border-radius: 50px;
             cursor: pointer;
             font-size: 16px;
-            transition: all 0.4s ease;
+            transition: 0.4s;
         }
 
-        button:hover {
-            transform: scale(1.06);
-            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.5);
-        }
+        button:hover { transform: scale(1.06); box-shadow: 0 12px 30px rgba(212, 175, 55, 0.5); }
 
         /* CONTACT */
-        #contact {
-            background: #0a0a0a;
-        }
+        .contact-info { max-width: 620px; margin: 0 auto; font-size: 18px; }
+        .contact-info strong { color: var(--gold); }
 
-        .contact-info {
-            max-width: 620px;
-            margin: 0 auto;
-            font-size: 18px;
-            line-height: 2.1;
-        }
-
-        .contact-info strong {
-            color: var(--gold);
-        }
-
-        /* FOOTER */
         footer {
             background: #000;
             padding: 45px 5%;
             text-align: center;
             color: #999;
-            font-size: 15px;
         }
 
-        /* WHATSAPP BUTTON */
+        /* WHATSAPP */
         .whatsapp {
             position: fixed;
             bottom: 35px;
@@ -298,39 +269,15 @@
             align-items: center;
             justify-content: center;
             border-radius: 50%;
-            text-decoration: none;
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
             z-index: 999;
-            transition: all 0.3s ease;
+            transition: 0.3s;
         }
 
-        .whatsapp:hover {
-            transform: scale(1.1);
-        }
+        .whatsapp svg { width: 40px; height: 40px; fill: white; }
 
-        .whatsapp svg {
-            width: 40px;
-            height: 40px;
-            fill: white;
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
-            .hero-text {
-                font-size: 38px;
-                padding: 22px 40px;
-            }
-            header {
-                padding: 15px 5%;
-                flex-direction: column;
-                gap: 18px;
-            }
-            h2 {
-                font-size: 40px;
-            }
-            .why-card {
-                min-width: 290px;
-            }
+            .hero-text { font-size: 38px; padding: 22px 40px; }
+            header { flex-direction: column; gap: 18px; }
         }
     </style>
 </head>
@@ -338,7 +285,7 @@
 
     <header>
         <div class="logo">
-            <img src="logo.jpg" alt="Priti Jewellers">
+            <img src="logo.jpg" alt="Priti Jewellers Brahmapuri Logo">
             <h1>Priti Jewellers</h1>
         </div>
         <nav>
@@ -348,34 +295,20 @@
             <a href="#contact">Contact</a>
             
             <a href="https://www.instagram.com/pritijewellers_/" target="_blank" class="insta-btn">
-                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.849.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4 2.21 0 4 1.791 4 4 0 2.21-1.79 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                </svg>
+                <svg class="nav-icon" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.849.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4 2.21 0 4 1.791 4 4 0 2.21-1.79 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
             </a>
 
-            <a href="https://maps.app.goo.gl/J6nWHvYyZNvwuSk3A" target="_blank" class="map-btn">
-                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                </svg>
+            <a href="https://maps.google.com/?q=Priti+Jewellers+Brahmapuri" target="_blank" class="map-btn">
+                <svg class="nav-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
             </a>
         </nav>
     </header>
 
     <section class="slideshow">
-        <div class="slide active"><img src="shop1.png" alt="Priti Jewellers"></div>
-        <div class="slide"><img src="shop2.png" alt="Priti Jewellers"></div>
-        <div class="slide"><img src="shop3.png" alt="Priti Jewellers"></div>
-        <div class="slide"><img src="https://media.istockphoto.com/id/1276740597/photo/indian-traditional-gold-necklace.jpg?s=612x612&w=0&k=20&c=OYp1k0OVJObYq9hqVK_r6NwYa_W54km4nya1R-ovIUY=" alt="Gold Necklace"></div>
-        <div class="slide"><img src="https://media.istockphoto.com/id/1277517088/photo/fancy-designer-antique-golden-bracelets-for-woman-fashion.jpg?s=612x612&w=0&k=20&c=n49O0S5rIgzxJX5bU1YjwRHfou0DYPcmsv-N5JAAM14=" alt="Gold Bracelets"></div>
-        <div class="slide"><img src="https://media.istockphoto.com/id/1415483167/photo/gold-jewelry-diamond-rings-show-in-luxury-retail-store-display-showcase.jpg?s=612x612&w=0&k=20&c=BkT5LNV1MuXwY7ZYOQ1SH8kcklpd7Lcwr5mIdWZz5Uo=" alt="Jewellery Showcase"></div>
-        <div class="slide"><img src="https://media.istockphoto.com/id/1944923205/photo/close-up-of-the-wedding-rings-of-the-bride-and-groom-in-a-box.jpg?s=612x612&w=0&k=20&c=wAGhhCQD0KMyZy6uDUVdTSEYjUXmH49znFShw1V_VG4=" alt="Wedding Rings"></div>
-        <div class="slide"><img src="https://media.istockphoto.com/id/494833184/photo/shiny-gold-and-silver-jewelery.jpg?s=612x612&w=0&k=20&c=IyxoyEJuKNpTkiuoFMsw4wJT9fI-r0MkLJ0JxOrcg44=" alt="Gold Jewellery"></div>
-        <div class="slide"><img src="https://media.istockphoto.com/id/1203020545/photo/indian-bridal-ethnic-jewellery-gold.jpg?s=612x612&w=0&k=20&c=mBV4Ij1FaiJkx82UwrMPkkjcOvHzucP5kRG9bwAVhik=" alt="Bridal Jewellery"></div>
-        <div class="slide"><img src="https://media.istockphoto.com/id/1133521557/photo/fancy-designer-golden-bracelets-bangles-jewelry-closeup-macro-image-for-woman-fashion.jpg?s=612x612&w=0&k=20&c=8Br1WegtcYF4fO2QqBBoIwfU2JK0ij6XV9daFQX_SFo=" alt="Gold Bangles"></div>
-        <div class="slide"><img src="https://media.istockphoto.com/id/139890630/photo/four-ornate-gold-bangles-on-a-black-background.jpg?s=612x612&w=0&k=20&c=uLH8fAGSeYM80OojbbszsXAOV3B5b8_YkNl7wLLxydA=" alt="Gold Bangles"></div>
-        <div class="slide"><img src="https://media.istockphoto.com/id/1198714412/photo/bangles-made-of-gold.jpg?s=612x612&w=0&k=20&c=fvlLFQegczkC87aBXXuJli0XszW5O0DG_VBOKVXB2Lg=" alt="Gold Bangles"></div>
-        <div class="slide"><img src="https://media.istockphoto.com/id/1133525210/photo/pair-of-fancy-golden-designer-earrings-closeup-macro-image-on-red-background.jpg?s=612x612&w=0&k=20&c=ZUknXtyeMhsS9Tdd2nRt8DkOTHc-6tmeG-KdTV_ODLU=" alt="Gold Earrings"></div>
-
+        <div class="slide active"><img src="shop1.png" alt="Priti Jewellers Shop Brahmapuri"></div>
+        <div class="slide"><img src="shop2.png" alt="Inside Priti Jewellers"></div>
+        <div class="slide"><img src="https://media.istockphoto.com/id/1276740597/photo/indian-traditional-gold-necklace.jpg?s=612x612&w=0&k=20&c=OYp1k0OVJObYq9hqVK_r6NwYa_W54km4nya1R-ovIUY=" alt="Antique Gold Necklace Brahmapuri"></div>
+        <div class="slide"><img src="https://media.istockphoto.com/id/1203020545/photo/indian-bridal-ethnic-jewellery-gold.jpg?s=612x612&w=0&k=20&c=mBV4Ij1FaiJkx82UwrMPkkjcOvHzucP5kRG9bwAVhik=" alt="Bridal Gold Collection"></div>
         <div class="hero-text">Priti Jewellers</div>
     </section>
 
@@ -383,127 +316,43 @@
         <h2>Our Collection</h2>
         <div class="product-grid">
             <div class="product">
-                <img src="https://images.unsplash.com/photo-1601121141418-c1caa10a2a0b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Gold Necklace">
+                <img src="https://images.unsplash.com/photo-1601121141418-c1caa10a2a0b?q=80&w=1170&auto=format&fit=crop" alt="Gold Necklace Design">
                 <div class="product-content">
                     <h3>Gold Necklace</h3>
-                    <a href="https://wa.me/919422839306?text=I%20want%20Gold%20Necklace" target="_blank">
-                        <button>Order Now</button>
-                    </a>
+                    <button onclick="window.open('https://wa.me/919422839306?text=I%20want%20Gold%20Necklace')">Order Now</button>
                 </div>
             </div>
             <div class="product">
-                <img src="https://images.unsplash.com/photo-1598560917807-1bae44bd2be8?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Diamond Ring">
+                <img src="https://images.unsplash.com/photo-1598560917807-1bae44bd2be8?q=80&w=880&auto=format&fit=crop" alt="Certified Diamond Ring">
                 <div class="product-content">
                     <h3>Diamond Ring</h3>
-                    <a href="https://wa.me/919422839306?text=I%20want%20Diamond%20Ring" target="_blank">
-                        <button>Order Now</button>
-                    </a>
+                    <button onclick="window.open('https://wa.me/919422839306?text=I%20want%20Diamond%20Ring')">Order Now</button>
                 </div>
             </div>
             <div class="product">
-                <img src="https://images.unsplash.com/photo-1651160670627-2896ddf7822f?q=80&w=768&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Gold Earrings">
+                <img src="https://images.unsplash.com/photo-1651160670627-2896ddf7822f?q=80&w=768&auto=format&fit=crop" alt="Latest Gold Earrings">
                 <div class="product-content">
                     <h3>Gold Earrings</h3>
-                    <a href="https://wa.me/919422839306?text=I%20want%20Gold%20Earrings" target="_blank">
-                        <button>Order Now</button>
-                    </a>
-                </div>
-            </div>
-            <div class="product">
-                <img src="https://media.istockphoto.com/id/486592060/photo/indian-jewellery.jpg?s=612x612&w=0&k=20&c=-7hy7-dPV7q7brtV60TrCR2Uq3vhrIaEU3tUqjqNYww=" alt="Bracelet">
-                <div class="product-content">
-                    <h3>Bracelet</h3>
-                    <a href="https://wa.me/919422839306?text=I%20want%20Bracelet" target="_blank">
-                        <button>Order Now</button>
-                    </a>
-                </div>
-            </div>
-            <div class="product">
-                <img src="https://media.istockphoto.com/id/1276740594/photo/fancy-designer-antique-golden-bracelets-for-woman-fashion.jpg?s=612x612&w=0&k=20&c=Qngk5J8pyZatGUpkD4EnnGaZYCFaoQs55nMnCF_g1KI=" alt="Gold Bangles">
-                <div class="product-content">
-                    <h3>Gold Bangles</h3>
-                    <a href="https://wa.me/919422839306?text=I%20want%20Gold%20Bangles" target="_blank">
-                        <button>Order Now</button>
-                    </a>
-                </div>
-            </div>
-            <div class="product">
-                <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d" alt="Pendant">
-                <div class="product-content">
-                    <h3>Pendant</h3>
-                    <a href="https://wa.me/919422839306?text=I%20want%20Pendant" target="_blank">
-                        <button>Order Now</button>
-                    </a>
+                    <button onclick="window.open('https://wa.me/919422839306?text=I%20want%20Gold%20Earrings')">Order Now</button>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="section why-us" id="why-us">
-        <h2>Why Choose Us?</h2>
+        <h2>Why Choose Priti Jewellers?</h2>
         <div class="why-track">
-            <div class="why-card">
-                <h3>HUID & BIS Hallmark</h3>
-                <p>Every piece carries authentic HUID and BIS Hallmark ensuring highest purity standards.</p>
-            </div>
-            <div class="why-card">
-                <h3>100% Transparency</h3>
-                <p>Clear and honest pricing with complete breakdown of gold, making charges and taxes.</p>
-            </div>
-            <div class="why-card">
-                <h3>Guaranteed Buyback</h3>
-                <p>Fair and transparent buyback policy on all jewellery purchased from us.</p>
-            </div>
-            <div class="why-card">
-                <h3>Lifetime Exchange</h3>
-                <p>Enjoy lifetime exchange facility with minimal charges and hassle-free process.</p>
-            </div>
-            <div class="why-card">
-                <h3>Certified Diamonds</h3>
-                <p>Only natural, conflict-free diamonds with IGI/GIA certification for authenticity.</p>
-            </div>
-            <div class="why-card">
-                <h3>Customized Jewellery</h3>
-                <p>Expert team to help you design unique jewellery as per your personal preference.</p>
-            </div>
-            <div class="why-card">
-                <h3>Expert Advice</h3>
-                <p>Professional guidance from experienced jewellers to help you make informed decisions.</p>
-            </div>
-
-            <div class="why-card">
-                <h3>HUID & BIS Hallmark</h3>
-                <p>Every piece carries authentic HUID and BIS Hallmark ensuring highest purity standards.</p>
-            </div>
-            <div class="why-card">
-                <h3>100% Transparency</h3>
-                <p>Clear and honest pricing with complete breakdown of gold, making charges and taxes.</p>
-            </div>
-            <div class="why-card">
-                <h3>Guaranteed Buyback</h3>
-                <p>Fair and transparent buyback policy on all jewellery purchased from us.</p>
-            </div>
-            <div class="why-card">
-                <h3>Lifetime Exchange</h3>
-                <p>Enjoy lifetime exchange facility with minimal charges and hassle-free process.</p>
-            </div>
-            <div class="why-card">
-                <h3>Certified Diamonds</h3>
-                <p>Only natural, conflict-free diamonds with IGI/GIA certification for authenticity.</p>
-            </div>
-            <div class="why-card">
-                <h3>Customized Jewellery</h3>
-                <p>Expert team to help you design unique jewellery as per your personal preference.</p>
-            </div>
-            <div class="why-card">
-                <h3>Expert Advice</h3>
-                <p>Professional guidance from experienced jewellers to help you make informed decisions.</p>
-            </div>
+            <div class="why-card"><h3>HUID & BIS Hallmark</h3><p>Every piece carries authentic HUID and BIS Hallmark ensuring highest purity.</p></div>
+            <div class="why-card"><h3>100% Transparency</h3><p>Clear pricing with complete breakdown of gold, making charges and taxes.</p></div>
+            <div class="why-card"><h3>Guaranteed Buyback</h3><p>Fair and transparent buyback policy on all jewellery purchased from us.</p></div>
+            <div class="why-card"><h3>Lifetime Exchange</h3><p>Enjoy lifetime exchange facility with minimal charges and hassle-free process.</p></div>
+            <div class="why-card"><h3>HUID & BIS Hallmark</h3><p>Every piece carries authentic HUID and BIS Hallmark ensuring highest purity.</p></div>
+            <div class="why-card"><h3>100% Transparency</h3><p>Clear pricing with complete breakdown of gold, making charges and taxes.</p></div>
         </div>
     </section>
 
     <section class="section" id="contact">
-        <h2>Contact Us</h2>
+        <h2>Visit Our Store in Brahmapuri</h2>
         <div class="contact-info">
             <p><strong>WhatsApp:</strong> +91 94228 39306</p>
             <p><strong>Address:</strong><br>
@@ -514,11 +363,11 @@
     </section>
 
     <footer>
-        <p>© 2026 Priti Jewellers • All Rights Reserved</p>
+        <p>© 2026 Priti Jewellers Brahmapuri • All Rights Reserved</p>
     </footer>
 
     <a href="https://wa.me/919422839306" target="_blank" class="whatsapp" title="Chat on WhatsApp">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <svg viewBox="0 0 24 24">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.485-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.522-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.571-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
             <path d="M12 2C6.48 2 2 6.59 2 12.253c0 2.1.64 4.05 1.738 5.66L2 22l4.19-1.1c1.56.85 3.32 1.3 5.11 1.3 5.52 0 10-4.59 10-10.253C22 6.59 17.52 2 12 2zm0 18.5c-1.45 0-2.86-.4-4.07-1.15L4.5 20.5l1.2-3.48C4.7 15.3 4 13.8 4 12.25 4 7.7 7.7 4 12 4s8 3.7 8 8.25c0 4.55-3.7 8.25-8 8.25z"/>
         </svg>
@@ -527,13 +376,11 @@
     <script>
         let slides = document.querySelectorAll(".slide");
         let current = 0;
-
         function showNextSlide() {
             slides[current].classList.remove("active");
             current = (current + 1) % slides.length;
             slides[current].classList.add("active");
         }
-
         setInterval(showNextSlide, 3200);
     </script>
 </body>
