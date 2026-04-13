@@ -7,15 +7,18 @@
     <meta name="google-site-verification" content="mpkAe-im1mV3eW6RkPzGhnD7MKk0S7U8du7LFjkz8nc" />
 
     <title>Priti Jewellers | Best Gold & Diamond Jewellery in Brahmapuri</title>
+    
     <meta name="description" content="Priti Jewellers Brahmapuri offers HUID & BIS Hallmarked gold, certified diamonds, and custom jewellery. Visit us at Sarafa Bazar for guaranteed buyback and lifetime exchange.">
     <meta name="keywords" content="Priti Jewellers, Jewellery Shop Brahmapuri, Gold Jewellery Nagpur, BIS Hallmarked Gold, Diamond Rings Brahmapuri, Sarafa Bazar Brahmapuri">
+    
+    <meta name="robots" content="index, follow">
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "JewelryStore",
       "name": "Priti Jewellers",
-      "image": "https://yourusername.github.io/logo.jpg",
+      "image": "https://pritijewellers.github.io/logo.jpg",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Sarafa Bazar Road, Gujri Ward, Churhe Bada",
@@ -25,7 +28,7 @@
         "addressCountry": "IN"
       },
       "telephone": "+919422839306",
-      "url": "https://yourusername.github.io/"
+      "url": "https://pritijewellers.github.io/"
     }
     </script>
     
@@ -33,25 +36,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
-        :root {
-            --gold: #d4af37;
-            --dark: #111111;
-        }
+        :root { --gold: #d4af37; --dark: #111111; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #0a0a0a; color: #f5f5f5; font-family: 'Poppins', sans-serif; line-height: 1.6; }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: #0a0a0a;
-            color: #f5f5f5;
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-        }
-
-        /* HEADER */
         header {
             background: rgba(15, 15, 15, 0.98);
             backdrop-filter: blur(12px);
@@ -65,250 +53,73 @@
             border-bottom: 1px solid rgba(212, 175, 55, 0.2);
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
+        .logo { display: flex; align-items: center; gap: 15px; }
+        .logo img { height: 75px; }
+        .logo h1 { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 32px; letter-spacing: 2px; font-weight: 700; }
 
-        .logo img {
-            height: 75px;
-        }
-
-        .logo h1 {
-            font-family: 'Playfair Display', serif;
-            color: var(--gold);
-            font-size: 32px;
-            letter-spacing: 2px;
-            font-weight: 700;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        nav a {
-            color: #eee;
-            text-decoration: none;
-            padding: 10px 18px;
-            border-radius: 8px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        nav a:hover {
-            background: rgba(212, 175, 55, 0.15);
-            color: var(--gold);
-        }
-
+        nav { display: flex; align-items: center; gap: 10px; }
+        nav a { color: #eee; text-decoration: none; padding: 10px 18px; border-radius: 8px; font-weight: 500; transition: 0.3s; }
+        nav a:hover { background: rgba(212, 175, 55, 0.15); color: var(--gold); }
         .insta-btn { background: #ff4d6d; color: white !important; }
-        .map-btn { background: #007bff; color: white !important; }
 
-        .nav-icon {
-            width: 24px;
-            height: 24px;
-            fill: currentColor;
-        }
-
-        /* HERO SLIDESHOW */
-        .slideshow {
-            position: relative;
-            height: 92vh;
-            overflow: hidden;
-        }
-
-        .slide {
-            position: absolute;
-            inset: 0;
-            opacity: 0;
-            transition: opacity 1.8s ease;
-        }
-
+        .slideshow { position: relative; height: 92vh; overflow: hidden; }
+        .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1.8s ease; }
         .slide.active { opacity: 1; }
-
-        .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+        .slide img { width: 100%; height: 100%; object-fit: cover; }
 
         .hero-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-family: 'Playfair Display', serif;
-            font-size: 62px;
-            color: white;
-            text-align: center;
-            background: rgba(0, 0, 0, 0.72);
-            padding: 30px 70px;
-            border-radius: 20px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
-            z-index: 10;
-            letter-spacing: 4px;
-            border: 1px solid rgba(212, 175, 55, 0.4);
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            font-family: 'Playfair Display', serif; font-size: 62px; color: white;
+            text-align: center; background: rgba(0, 0, 0, 0.72); padding: 30px 70px;
+            border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.8); z-index: 10;
+            letter-spacing: 4px; border: 1px solid rgba(212, 175, 55, 0.4);
         }
 
-        /* SECTIONS */
-        .section {
-            padding: 110px 5%;
-            text-align: center;
-        }
+        .section { padding: 110px 5%; text-align: center; }
+        h2 { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 48px; margin-bottom: 70px; }
 
-        h2 {
-            font-family: 'Playfair Display', serif;
-            color: var(--gold);
-            font-size: 48px;
-            margin-bottom: 70px;
-            letter-spacing: 2px;
-        }
+        .why-us { background: #0a0a0a; overflow: hidden; }
+        .why-track { display: flex; gap: 35px; animation: trainMove 42s linear infinite; width: max-content; }
+        .why-card { background: #1a1a1a; min-width: 340px; padding: 45px 35px; border-radius: 20px; border: 1px solid rgba(212, 175, 55, 0.12); }
+        @keyframes trainMove { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-        /* WHY CHOOSE US - TRAIN EFFECT */
-        .why-us {
-            background: #0a0a0a;
-            overflow: hidden;
-        }
-
-        .why-track {
-            display: flex;
-            gap: 35px;
-            animation: trainMove 42s linear infinite;
-            width: max-content;
-        }
-
-        .why-us:hover .why-track { animation-play-state: paused; }
-
-        .why-card {
-            background: #1a1a1a;
-            min-width: 340px;
-            padding: 45px 35px;
-            border-radius: 20px;
-            border: 1px solid rgba(212, 175, 55, 0.12);
-            transition: all 0.4s ease;
-        }
-
-        .why-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--gold);
-            box-shadow: 0 20px 50px rgba(212, 175, 55, 0.25);
-        }
-
-        .why-card h3 { color: var(--gold); font-size: 24px; margin-bottom: 20px; }
-
-        @keyframes trainMove {
-            from { transform: translateX(0); }
-            to   { transform: translateX(-50%); }
-        }
-
-        /* PRODUCTS */
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-            gap: 40px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .product {
-            background: #1a1a1a;
-            border-radius: 22px;
-            overflow: hidden;
-            transition: all 0.5s ease;
-        }
-
-        .product:hover { transform: translateY(-15px); }
-
-        .product img {
-            width: 100%;
-            height: 340px;
-            object-fit: cover;
-            transition: transform 0.7s ease;
-        }
-
-        .product:hover img { transform: scale(1.07); }
-
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 40px; max-width: 1400px; margin: 0 auto; }
+        .product { background: #1a1a1a; border-radius: 22px; overflow: hidden; transition: 0.5s; }
+        .product img { width: 100%; height: 340px; object-fit: cover; }
         .product-content { padding: 28px; }
 
         button {
             background: linear-gradient(45deg, #d4af37, #f0c14e);
-            color: #111;
-            font-weight: 600;
-            border: none;
-            padding: 14px 34px;
-            border-radius: 50px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.4s;
+            color: #111; font-weight: 600; border: none; padding: 14px 34px;
+            border-radius: 50px; cursor: pointer; font-size: 16px; transition: 0.4s;
         }
 
-        button:hover { transform: scale(1.06); box-shadow: 0 12px 30px rgba(212, 175, 55, 0.5); }
+        footer { background: #000; padding: 45px 5%; text-align: center; color: #999; }
+        .whatsapp { position: fixed; bottom: 35px; right: 35px; background: #25D366; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; border-radius: 50%; z-index: 999; }
+        .whatsapp svg { width: 40px; fill: white; }
 
-        /* CONTACT */
-        .contact-info { max-width: 620px; margin: 0 auto; font-size: 18px; }
-        .contact-info strong { color: var(--gold); }
-
-        footer {
-            background: #000;
-            padding: 45px 5%;
-            text-align: center;
-            color: #999;
-        }
-
-        /* WHATSAPP */
-        .whatsapp {
-            position: fixed;
-            bottom: 35px;
-            right: 35px;
-            background: #25D366;
-            width: 70px;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            z-index: 999;
-            transition: 0.3s;
-        }
-
-        .whatsapp svg { width: 40px; height: 40px; fill: white; }
-
-        @media (max-width: 768px) {
-            .hero-text { font-size: 38px; padding: 22px 40px; }
-            header { flex-direction: column; gap: 18px; }
-        }
+        @media (max-width: 768px) { .hero-text { font-size: 38px; padding: 22px 40px; } header { flex-direction: column; gap: 18px; } }
     </style>
 </head>
 <body>
 
     <header>
         <div class="logo">
-            <img src="logo.jpg" alt="Priti Jewellers Brahmapuri Logo">
+            <img src="logo.jpg" alt="Priti Jewellers Logo">
             <h1>Priti Jewellers</h1>
         </div>
         <nav>
             <a href="#">Home</a>
             <a href="#products">Shop</a>
             <a href="#why-us">Why Us</a>
-            <a href="#contact">Contact</a>
-            
-            <a href="https://www.instagram.com/pritijewellers_/" target="_blank" class="insta-btn">
-                <svg class="nav-icon" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.849.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4 2.21 0 4 1.791 4 4 0 2.21-1.79 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            </a>
-
-            <a href="https://maps.google.com/?q=Priti+Jewellers+Brahmapuri" target="_blank" class="map-btn">
-                <svg class="nav-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-            </a>
+            <a href="https://www.instagram.com/pritijewellers_/" target="_blank" class="insta-btn">Instagram</a>
         </nav>
     </header>
 
     <section class="slideshow">
         <div class="slide active"><img src="shop1.png" alt="Priti Jewellers Shop Brahmapuri"></div>
         <div class="slide"><img src="shop2.png" alt="Inside Priti Jewellers"></div>
-        <div class="slide"><img src="https://media.istockphoto.com/id/1276740597/photo/indian-traditional-gold-necklace.jpg?s=612x612&w=0&k=20&c=OYp1k0OVJObYq9hqVK_r6NwYa_W54km4nya1R-ovIUY=" alt="Antique Gold Necklace Brahmapuri"></div>
-        <div class="slide"><img src="https://media.istockphoto.com/id/1203020545/photo/indian-bridal-ethnic-jewellery-gold.jpg?s=612x612&w=0&k=20&c=mBV4Ij1FaiJkx82UwrMPkkjcOvHzucP5kRG9bwAVhik=" alt="Bridal Gold Collection"></div>
+        <div class="slide"><img src="https://media.istockphoto.com/id/1276740597/photo/indian-traditional-gold-necklace.jpg?s=612x612&w=0&k=20&c=OYp1k0OVJObYq9hqVK_r6NwYa_W54km4nya1R-ovIUY=" alt="Gold Necklace"></div>
         <div class="hero-text">Priti Jewellers</div>
     </section>
 
@@ -316,72 +127,49 @@
         <h2>Our Collection</h2>
         <div class="product-grid">
             <div class="product">
-                <img src="https://images.unsplash.com/photo-1601121141418-c1caa10a2a0b?q=80&w=1170&auto=format&fit=crop" alt="Gold Necklace Design">
+                <img src="https://images.unsplash.com/photo-1601121141418-c1caa10a2a0b?q=80&w=1170&auto=format&fit=crop" alt="Gold Necklace">
                 <div class="product-content">
                     <h3>Gold Necklace</h3>
-                    <button onclick="window.open('https://wa.me/919422839306?text=I%20want%20Gold%20Necklace')">Order Now</button>
+                    <button onclick="window.open('https://wa.me/919422839306?text=Interested in Gold Necklace')">Order Now</button>
                 </div>
             </div>
             <div class="product">
-                <img src="https://images.unsplash.com/photo-1598560917807-1bae44bd2be8?q=80&w=880&auto=format&fit=crop" alt="Certified Diamond Ring">
+                <img src="https://images.unsplash.com/photo-1598560917807-1bae44bd2be8?q=80&w=880&auto=format&fit=crop" alt="Diamond Ring">
                 <div class="product-content">
                     <h3>Diamond Ring</h3>
-                    <button onclick="window.open('https://wa.me/919422839306?text=I%20want%20Diamond%20Ring')">Order Now</button>
-                </div>
-            </div>
-            <div class="product">
-                <img src="https://images.unsplash.com/photo-1651160670627-2896ddf7822f?q=80&w=768&auto=format&fit=crop" alt="Latest Gold Earrings">
-                <div class="product-content">
-                    <h3>Gold Earrings</h3>
-                    <button onclick="window.open('https://wa.me/919422839306?text=I%20want%20Gold%20Earrings')">Order Now</button>
+                    <button onclick="window.open('https://wa.me/919422839306?text=Interested in Diamond Ring')">Order Now</button>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="section why-us" id="why-us">
-        <h2>Why Choose Priti Jewellers?</h2>
+        <h2>Why Priti Jewellers?</h2>
         <div class="why-track">
-            <div class="why-card"><h3>HUID & BIS Hallmark</h3><p>Every piece carries authentic HUID and BIS Hallmark ensuring highest purity.</p></div>
-            <div class="why-card"><h3>100% Transparency</h3><p>Clear pricing with complete breakdown of gold, making charges and taxes.</p></div>
-            <div class="why-card"><h3>Guaranteed Buyback</h3><p>Fair and transparent buyback policy on all jewellery purchased from us.</p></div>
-            <div class="why-card"><h3>Lifetime Exchange</h3><p>Enjoy lifetime exchange facility with minimal charges and hassle-free process.</p></div>
-            <div class="why-card"><h3>HUID & BIS Hallmark</h3><p>Every piece carries authentic HUID and BIS Hallmark ensuring highest purity.</p></div>
-            <div class="why-card"><h3>100% Transparency</h3><p>Clear pricing with complete breakdown of gold, making charges and taxes.</p></div>
+            <div class="why-card"><h3>HUID & BIS Hallmark</h3><p>Purity guaranteed with government hallmarking.</p></div>
+            <div class="why-card"><h3>100% Transparency</h3><p>Clear pricing with no hidden charges.</p></div>
+            <div class="why-card"><h3>Guaranteed Buyback</h3><p>Best exchange and buyback policy in Brahmapuri.</p></div>
+            <div class="why-card"><h3>HUID & BIS Hallmark</h3><p>Purity guaranteed with government hallmarking.</p></div>
         </div>
     </section>
 
-    <section class="section" id="contact">
-        <h2>Visit Our Store in Brahmapuri</h2>
-        <div class="contact-info">
-            <p><strong>WhatsApp:</strong> +91 94228 39306</p>
-            <p><strong>Address:</strong><br>
-            Sarafa Bazar Road, Gujri Ward,<br>
-            Churhe Bada, Brahmapuri,<br>
-            Maharashtra 441206</p>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2026 Priti Jewellers Brahmapuri • All Rights Reserved</p>
+    <footer id="contact">
+        <p><strong>Priti Jewellers</strong><br>Sarafa Bazar, Gujri Ward, Brahmapuri, Maharashtra 441206</p>
+        <p style="margin-top: 20px;">© 2026 Priti Jewellers Brahmapuri • All Rights Reserved</p>
     </footer>
 
-    <a href="https://wa.me/919422839306" target="_blank" class="whatsapp" title="Chat on WhatsApp">
-        <svg viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.485-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.522-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.571-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-            <path d="M12 2C6.48 2 2 6.59 2 12.253c0 2.1.64 4.05 1.738 5.66L2 22l4.19-1.1c1.56.85 3.32 1.3 5.11 1.3 5.52 0 10-4.59 10-10.253C22 6.59 17.52 2 12 2zm0 18.5c-1.45 0-2.86-.4-4.07-1.15L4.5 20.5l1.2-3.48C4.7 15.3 4 13.8 4 12.25 4 7.7 7.7 4 12 4s8 3.7 8 8.25c0 4.55-3.7 8.25-8 8.25z"/>
-        </svg>
+    <a href="https://wa.me/919422839306" target="_blank" class="whatsapp">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.59 2 12.253c0 2.1.64 4.05 1.738 5.66L2 22l4.19-1.1c1.56.85 3.32 1.3 5.11 1.3 5.52 0 10-4.59 10-10.253C22 6.59 17.52 2 12 2zm0 18.5c-1.45 0-2.86-.4-4.07-1.15L4.5 20.5l1.2-3.48C4.7 15.3 4 13.8 4 12.25 4 7.7 7.7 4 12 4s8 3.7 8 8.25c0 4.55-3.7 8.25-8 8.25z"/></svg>
     </a>
 
     <script>
         let slides = document.querySelectorAll(".slide");
         let current = 0;
-        function showNextSlide() {
+        setInterval(() => {
             slides[current].classList.remove("active");
             current = (current + 1) % slides.length;
             slides[current].classList.add("active");
-        }
-        setInterval(showNextSlide, 3200);
+        }, 3200);
     </script>
 </body>
 </html>
