@@ -304,6 +304,35 @@
             }
         }
 
+        /* OFFERS SECTION */
+        .offers-section {
+            width: 100%;
+            line-height: 0;
+        }
+
+        .offers-section .offer-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .offers-section .offer-img-desktop {
+            display: block;
+        }
+
+        .offers-section .offer-img-mobile {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .offers-section .offer-img-desktop {
+                display: none;
+            }
+            .offers-section .offer-img-mobile {
+                display: block;
+            }
+        }
+
         /* PRODUCTS SECTION */
         .products-section {
             padding: 8rem 5%;
@@ -794,9 +823,15 @@
         
         <div class="hero-overlay">
             <h2 class="hero-title">PRITI JEWELLERS</h2>
-            <p class="hero-subtitle">Best Gold & Diamond Jewellery in Brahmapuri</p>
+            <p class="hero-subtitle">Akshay Tritiya 2026 Special – 100% Hallmarked Gold Jewellery, Lowest Making Charges & Complete Transparency at Priti Jewellers, Brahmapuri.</p>
             <a href="#products" class="cta-button">Explore Collection</a>
         </div>
+    </section>
+
+    <!-- OFFERS SECTION -->
+    <section class="offers-section" id="offers">
+        <img src="akshaya-tritiya-desktop.png" alt="Akshaya Tritiya Special Offer" class="offer-img offer-img-desktop">
+        <img src="akshaya-tritiya-mobile.png" alt="Akshaya Tritiya Special Offer" class="offer-img offer-img-mobile">
     </section>
 
     <!-- PRODUCTS SECTION -->
