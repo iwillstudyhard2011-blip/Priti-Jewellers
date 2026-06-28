@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <meta name="google-site-verification" content="mpkAe-im1mV3eW6RkPzGhnD7MKk0S7U8du7LFjkz8nc" />
 
     <title>Priti Jewellers | Best Gold & Diamond Jewellery in Brahmapuri</title>
@@ -28,993 +27,1507 @@
       "url": "https://pritijewellers.github.io/"
     }
     </script>
-    
+
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
     <style>
-        :root {
-            --gold-primary: #C9A86A;
-            --gold-dark: #A68B5B;
-            --gold-light: #E8D4A8;
-            --burgundy: #5C2E2E;
-            --cream: #FAF8F3;
-            --charcoal: #1C1C1C;
-            --white: #FFFFFF;
-            --gray-light: #F5F3EE;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Lato', sans-serif;
-            background: var(--cream);
-            color: var(--charcoal);
-            overflow-x: hidden;
-        }
-
-        /* HEADER */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background: linear-gradient(180deg, rgba(250, 248, 243, 0.98) 0%, rgba(250, 248, 243, 0.95) 100%);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(201, 168, 106, 0.15);
-            transition: all 0.4s ease;
-        }
-
-        header.scrolled {
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
-        }
-
-        .header-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1.2rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .logo-section img {
-            height: 65px;
-            width: auto;
-            transition: transform 0.3s ease;
-        }
-
-        .logo-section:hover img {
-            transform: scale(1.05);
-        }
-
-        .brand-text h1 {
-            font-family: 'Cinzel', serif;
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: var(--burgundy);
-            letter-spacing: 1px;
-            margin-bottom: 2px;
-        }
-
-        .tagline {
-            font-size: 0.7rem;
-            color: var(--gold-dark);
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-weight: 400;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 2.5rem;
-        }
-
-        nav a {
-            color: var(--charcoal);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            position: relative;
-            transition: color 0.3s ease;
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--gold-primary);
-            transition: width 0.3s ease;
-        }
-
-        nav a:hover {
-            color: var(--gold-dark);
-        }
-
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-left: 1rem;
-        }
-
-        .social-btn {
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-
-        .instagram-btn {
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-        }
-
-        .maps-btn {
-            background: #4285F4;
-        }
-
-        .social-btn svg {
-            width: 22px;
-            height: 22px;
-            fill: white;
-        }
-
-        .social-btn:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        /* HERO SLIDESHOW */
-        .hero-section {
-            position: relative;
-            height: 100vh;
-            overflow: hidden;
-            margin-top: 87px;
-        }
-
-        .slideshow-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-
-        .slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 1.5s ease-in-out;
-        }
-
-        .slide.active {
-            opacity: 1;
-        }
-
-        .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: brightness(0.85);
-        }
-
-        .slide::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(180deg, rgba(28, 28, 28, 0.3) 0%, rgba(28, 28, 28, 0.6) 100%);
-            z-index: 1;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 10;
-            text-align: center;
-            width: 90%;
-            max-width: 800px;
-        }
-
-        .hero-title {
-            font-family: 'Cinzel', serif;
-            font-size: 4.5rem;
-            font-weight: 700;
-            color: var(--white);
-            letter-spacing: 6px;
-            margin-bottom: 1rem;
-            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .hero-subtitle {
-            font-size: 1.3rem;
-            color: var(--gold-light);
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            font-weight: 300;
-            margin-bottom: 2.5rem;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-            animation: fadeInUp 1s ease-out 0.2s both;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 1.2rem 3rem;
-            background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-dark) 100%);
-            color: var(--white);
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            border-radius: 50px;
-            box-shadow: 0 10px 30px rgba(201, 168, 106, 0.4);
-            transition: all 0.4s ease;
-            animation: fadeInUp 1s ease-out 0.4s both;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(201, 168, 106, 0.6);
-            background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold-primary) 100%);
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* OFFERS SECTION */
-        .offers-section {
-            width: 100%;
-            line-height: 0;
-        }
-
-        .offers-section .offer-img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .offers-section .offer-img-desktop {
-            display: block;
-        }
-
-        .offers-section .offer-img-mobile {
-            display: none;
-        }
-
-        @media (max-width: 768px) {
-            .offers-section .offer-img-desktop {
-                display: none;
-            }
-            .offers-section .offer-img-mobile {
-                display: block;
-            }
-        }
-
-        /* PRODUCTS SECTION */
-        .products-section {
-            padding: 8rem 5%;
-            background: var(--white);
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 5rem;
-        }
-
-        .section-title {
-            font-family: 'Cinzel', serif;
-            font-size: 3rem;
-            color: var(--burgundy);
-            letter-spacing: 3px;
-            margin-bottom: 1rem;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
-        }
-
-        .section-subtitle {
-            font-size: 1.1rem;
-            color: var(--gold-dark);
-            font-weight: 300;
-            margin-top: 2rem;
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .product-card {
-            background: var(--gray-light);
-            border-radius: 16px;
-            overflow: hidden;
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-            position: relative;
-        }
-
-        .product-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border: 2px solid transparent;
-            border-radius: 16px;
-            transition: border-color 0.4s ease;
-            pointer-events: none;
-        }
-
-        .product-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 20px 50px rgba(201, 168, 106, 0.25);
-        }
-
-        .product-card:hover::before {
-            border-color: var(--gold-primary);
-        }
-
-        .product-image {
-            position: relative;
-            aspect-ratio: 4/3;
-            overflow: hidden;
-        }
-
-        .product-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease;
-        }
-
-        .product-card:hover .product-image img {
-            transform: scale(1.1);
-        }
-
-        .product-content {
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .product-content h3 {
-            font-family: 'Cinzel', serif;
-            font-size: 1.6rem;
-            color: var(--charcoal);
-            margin-bottom: 1.5rem;
-            letter-spacing: 1px;
-        }
-
-        .order-btn {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-dark) 100%);
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 50px;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 0.95rem;
-        }
-
-        .order-btn:hover {
-            background: linear-gradient(135deg, var(--gold-dark) 0%, var(--burgundy) 100%);
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(201, 168, 106, 0.4);
-        }
-
-        /* WHY CHOOSE US */
-        .why-us-section {
-            padding: 8rem 5%;
-            background: linear-gradient(135deg, var(--burgundy) 0%, #442020 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .why-us-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="1" fill="rgba(201,168,106,0.1)"/></svg>');
-            opacity: 0.4;
-        }
-
-        .why-us-section .section-title {
-            color: var(--gold-light);
-        }
-
-        .why-us-section .section-title::after {
-            background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
-        }
-
-        .features-container {
-            position: relative;
-            overflow: hidden;
-            padding: 3rem 0;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .features-track {
-            display: flex;
-            gap: 2rem;
-            animation: scroll 40s linear infinite;
-            width: max-content;
-        }
-
-        .features-container:hover .features-track {
-            animation-play-state: paused;
-        }
-
-        @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-
-        .feature-card {
-            min-width: 320px;
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(10px);
-            padding: 2.5rem 2rem;
-            border-radius: 16px;
-            border: 1px solid rgba(201, 168, 106, 0.2);
-            transition: all 0.4s ease;
-        }
-
-        .feature-card:hover {
-            background: rgba(255, 255, 255, 0.12);
-            border-color: var(--gold-primary);
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--gold-primary), var(--gold-light));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 1.8rem;
-        }
-
-        .feature-card h3 {
-            font-family: 'Cinzel', serif;
-            font-size: 1.4rem;
-            color: var(--gold-light);
-            margin-bottom: 1rem;
-            letter-spacing: 1px;
-            text-align: center;
-        }
-
-        .feature-card p {
-            color: rgba(255, 255, 255, 0.85);
-            line-height: 1.7;
-            text-align: center;
-            font-size: 0.95rem;
-        }
-
-        /* CONTACT SECTION */
-        .contact-section {
-            padding: 8rem 5%;
-            background: var(--white);
-        }
-
-        .contact-section .section-title {
-            color: var(--burgundy);
-        }
-
-        .contact-container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--gray-light);
-            padding: 4rem 3rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-
-        .contact-item {
-            text-align: center;
-        }
-
-        .contact-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 1.5rem;
-        }
-
-        .contact-label {
-            font-family: 'Cinzel', serif;
-            font-size: 1.2rem;
-            color: var(--burgundy);
-            margin-bottom: 0.8rem;
-            letter-spacing: 1px;
-        }
-
-        .contact-info {
-            color: var(--charcoal);
-            font-size: 1rem;
-            line-height: 1.8;
-        }
-
-        .contact-info a {
-            color: var(--gold-dark);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        .contact-info a:hover {
-            color: var(--burgundy);
-        }
-
-        /* FOOTER */
-        footer {
-            background: var(--charcoal);
-            color: rgba(255, 255, 255, 0.7);
-            padding: 3rem 5%;
-            text-align: center;
-        }
-
-        footer p {
-            font-size: 0.95rem;
-            letter-spacing: 0.5px;
-        }
-
-        /* WHATSAPP FLOAT */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 999;
-            transition: all 0.3s ease;
-        }
-
-        .whatsapp-float a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 65px;
-            height: 65px;
-            background: #25D366;
-            border-radius: 50%;
-            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
-            transition: all 0.3s ease;
-        }
-
-        .whatsapp-float a:hover {
-            transform: scale(1.1) translateY(-3px);
-            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.6);
-        }
-
-        .whatsapp-float svg {
-            width: 35px;
-            height: 35px;
-            fill: white;
-        }
-
-        /* MOBILE MENU */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.8rem;
-            color: var(--charcoal);
-            cursor: pointer;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 968px) {
-            .header-container {
-                flex-wrap: wrap;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            nav {
-                display: none;
-                width: 100%;
-                flex-direction: column;
-                gap: 1rem;
-                margin-top: 1rem;
-                padding-top: 1rem;
-                border-top: 1px solid rgba(201, 168, 106, 0.2);
-            }
-
-            nav.active {
-                display: flex;
-            }
-
-            .social-links {
-                margin-left: 0;
-                justify-content: center;
-            }
-
-            .hero-title {
-                font-size: 3rem;
-                letter-spacing: 3px;
-            }
-
-            .hero-subtitle {
-                font-size: 1rem;
-            }
-
-            .section-title {
-                font-size: 2.2rem;
-            }
-
-            .product-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .features-track {
-                animation-duration: 30s;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .hero-title {
-                font-size: 2.2rem;
-                letter-spacing: 2px;
-            }
-
-            .hero-subtitle {
-                font-size: 0.9rem;
-                letter-spacing: 2px;
-            }
-
-            .cta-button {
-                padding: 1rem 2rem;
-                font-size: 0.9rem;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            .contact-container {
-                padding: 2.5rem 1.5rem;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-        }
+/* ═══════════════════════════════════════════════════════════
+   DESIGN TOKENS
+   Brand DNA: Warm gold stone facade, teal-blue accents,
+   white marble interior, Nandi heritage, Devanagari script.
+   Palette drawn from the physical store & logo photography.
+═══════════════════════════════════════════════════════════ */
+:root {
+    /* Core Palette */
+    --gold-1: #C8A254;   /* rich logo gold */
+    --gold-2: #E2C47A;   /* lighter foil */
+    --gold-3: #F5E6BF;   /* pale gold / parchment */
+    --gold-4: #8C6A2F;   /* deep burnished */
+    --teal:   #3A6068;   /* shop facade teal-blue */
+    --teal-dk:#263F45;   /* dark teal */
+    --stone:  #C4A882;   /* warm stone facade */
+    --ivory:  #FDFAF3;   /* marble interior white */
+    --ivory2: #F5F0E6;   /* warm off-white */
+    --ink:    #100C07;   /* near black */
+    --ink-2:  #2B2218;   /* dark brown-black */
+    --muted:  #7A6E60;   /* mid warm gray */
+
+    /* Gold Foil Gradient (from logo) */
+    --foil: linear-gradient(120deg, #BF953F 0%, #FCF6BA 30%, #B38728 55%, #FBF5B7 80%, #AA771C 100%);
+
+    /* Typography */
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans:  'Jost', system-ui, sans-serif;
+
+    /* Easing */
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── RESET ─── */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; font-size:16px; }
+body {
+    font-family: var(--sans);
+    background: var(--ivory);
+    color: var(--ink);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+img { display:block; max-width:100%; }
+a { text-decoration:none; color:inherit; }
+button { font-family:inherit; cursor:pointer; border:none; background:none; }
+::selection { background:var(--gold-1); color:#fff; }
+:focus-visible { outline:2px solid var(--gold-1); outline-offset:3px; }
+@media (prefers-reduced-motion:reduce) {
+    *, *::before, *::after { animation-duration:.01ms !important; transition-duration:.01ms !important; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   PRELOADER
+═══════════════════════════════════════════════════════════ */
+#preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: var(--ivory);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+}
+#preloader.done {
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+}
+.pre-logo {
+    width: 90px;
+    height: 90px;
+    opacity: 0;
+    animation: preIn 0.9s 0.2s var(--ease) forwards;
+}
+.pre-logo img { width:100%; height:100%; object-fit:contain; }
+.pre-name {
+    font-family: var(--serif);
+    font-size: clamp(1.6rem, 4vw, 2.8rem);
+    font-weight: 400;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    overflow: hidden;
+}
+.pre-name span {
+    display: inline-block;
+    transform: translateY(110%);
+    animation: preSlide 0.9s 0.5s var(--ease) forwards;
+}
+.pre-rule {
+    width: 0;
+    height: 1px;
+    background: var(--gold-1);
+    animation: preRule 0.9s 1s var(--ease) forwards;
+}
+.pre-city {
+    font-size: 0.62rem;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    color: var(--gold-4);
+    opacity: 0;
+    animation: preIn 0.6s 1.3s ease forwards;
+}
+@keyframes preIn    { to { opacity:1; } }
+@keyframes preSlide { to { transform:translateY(0); } }
+@keyframes preRule  { to { width:100px; } }
+
+/* ═══════════════════════════════════════════════════════════
+   HEADER
+═══════════════════════════════════════════════════════════ */
+.header {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 900;
+    padding: 0 5%;
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background: rgba(253,250,243,0.0);
+    transition: background 0.5s, height 0.4s, box-shadow 0.4s;
+}
+.header.scrolled {
+    background: rgba(253,250,243,0.95);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 1px 28px rgba(16,12,7,0.08);
+    height: 72px;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    flex-shrink: 0;
+    z-index: 901;
+}
+.logo__emblem {
+    height: 52px;
+    width: auto;
+    flex-shrink: 0;
+    transition: transform 0.4s var(--ease);
+}
+.logo__emblem img { height:100%; width:auto; display:block; }
+.logo:hover .logo__emblem { transform:scale(1.05); }
+.logo__wordmark {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.logo__name {
+    font-family: var(--serif);
+    font-size: 1.55rem;
+    font-weight: 600;
+    color: var(--ink-2);
+    letter-spacing: 0.04em;
+    line-height: 1;
+}
+.logo__city {
+    font-size: 0.58rem;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-4);
+}
+
+/* Nav links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.6rem;
+    list-style: none;
+}
+.nav-link {
+    font-size: 0.73rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    position: relative;
+    padding-bottom: 3px;
+    transition: color 0.3s;
+}
+.nav-link::after {
+    content:'';
+    position:absolute;
+    bottom:0; left:0;
+    width:0; height:1px;
+    background:var(--gold-1);
+    transition: width 0.35s var(--ease);
+}
+.nav-link:hover { color:var(--gold-4); }
+.nav-link:hover::after { width:100%; }
+
+.nav-socials {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    border-left: 1px solid rgba(139,107,47,0.22);
+    padding-left: 1.4rem;
+}
+.soc-icon {
+    width:36px; height:36px;
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    transition: transform 0.3s var(--ease), box-shadow 0.3s;
+}
+.soc-icon svg { width:17px; height:17px; fill:#fff; }
+.soc-icon--ig  { background:linear-gradient(135deg,#f09433,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888); }
+.soc-icon--map { background:#4285F4; }
+.soc-icon:hover { transform:translateY(-2px) scale(1.08); box-shadow:0 6px 16px rgba(0,0,0,0.18); }
+
+/* Menu toggle (mobile) */
+.menu-btn {
+    display:none;
+    flex-direction:column;
+    gap:5px; padding:6px;
+    z-index:901;
+}
+.menu-btn span {
+    display:block; width:24px; height:1.5px;
+    background:var(--ink);
+    transition: transform 0.38s var(--ease), opacity 0.2s;
+}
+.menu-btn.open span:nth-child(1){ transform:translateY(6.5px) rotate(45deg); }
+.menu-btn.open span:nth-child(2){ opacity:0; }
+.menu-btn.open span:nth-child(3){ transform:translateY(-6.5px) rotate(-45deg); }
+
+/* Mobile nav drawer */
+.mobile-nav {
+    display:none;
+    position:fixed;
+    inset:0;
+    background:var(--teal-dk);
+    z-index:899;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:0;
+    clip-path:circle(0% at 95% 5%);
+    transition:clip-path 0.8s var(--ease);
+}
+.mobile-nav.open {
+    display:flex;
+    clip-path:circle(160% at 95% 5%);
+}
+.mobile-nav__links {
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:2.4rem;
+}
+.mobile-nav__link {
+    font-family:var(--serif);
+    font-size:clamp(2.2rem,7vw,4rem);
+    font-style:italic;
+    font-weight:400;
+    color:var(--gold-3);
+    letter-spacing:0.04em;
+    opacity:0;
+    transform:translateY(24px);
+    transition:opacity 0.5s var(--ease), transform 0.5s var(--ease), color 0.3s;
+}
+.mobile-nav.open .mobile-nav__link { opacity:1; transform:translateY(0); }
+.mobile-nav.open .mobile-nav__link:nth-child(1){ transition-delay:0.25s; }
+.mobile-nav.open .mobile-nav__link:nth-child(2){ transition-delay:0.35s; }
+.mobile-nav.open .mobile-nav__link:nth-child(3){ transition-delay:0.45s; }
+.mobile-nav.open .mobile-nav__link:nth-child(4){ transition-delay:0.55s; }
+.mobile-nav__link:hover { color:var(--gold-1); }
+.mobile-nav__city {
+    position:absolute; bottom:2.5rem;
+    font-size:0.62rem;
+    letter-spacing:0.32em;
+    text-transform:uppercase;
+    color:rgba(245,230,191,0.38);
+    opacity:0;
+    transition:opacity 0.5s 0.6s;
+}
+.mobile-nav.open .mobile-nav__city { opacity:1; }
+
+/* ═══════════════════════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════════════════════ */
+.hero {
+    position: relative;
+    height: 100svh;
+    min-height: 640px;
+    overflow: hidden;
+    margin-top: 84px;
+}
+
+/* Slideshow */
+.slideshow { position:absolute; inset:0; }
+.slide { position:absolute; inset:0; opacity:0; transition:opacity 2s ease; }
+.slide.active { opacity:1; }
+.slide img {
+    width:100%; height:100%;
+    object-fit:cover;
+    filter:brightness(0.75) saturate(0.88);
+}
+
+/* Multi-layer veil — warm from bottom to echo stone facade warmth */
+.hero__veil {
+    position:absolute; inset:0; z-index:2; pointer-events:none;
+    background:
+        linear-gradient(to right, rgba(16,12,7,0.62) 0%, rgba(16,12,7,0.18) 55%, transparent 100%),
+        linear-gradient(to top,   rgba(16,12,7,0.55) 0%, transparent 50%),
+        linear-gradient(to bottom,rgba(16,12,7,0.28) 0%, transparent 40%);
+}
+
+/* Hero content — left-anchored, editorial */
+.hero__body {
+    position:absolute; inset:0; z-index:10;
+    display:flex; flex-direction:column;
+    justify-content:flex-end;
+    padding: 0 6% 7%;
+    max-width:1380px;
+    width:100%;
+    left:50%; transform:translateX(-50%);
+}
+.hero__kicker {
+    display:inline-flex; align-items:center; gap:1rem;
+    margin-bottom:1.4rem;
+    opacity:0; animation:hIn 1s 0.2s var(--ease) forwards;
+}
+.hero__kicker-line { width:36px; height:1px; background:var(--gold-1); }
+.hero__kicker span {
+    font-size:0.65rem; font-weight:500;
+    letter-spacing:0.32em; text-transform:uppercase;
+    color:var(--gold-2);
+}
+.hero__title {
+    font-family:var(--serif);
+    font-size:clamp(3rem,7.5vw,7rem);
+    font-weight:300;
+    color:#fff;
+    line-height:1.0;
+    letter-spacing:0.01em;
+    margin-bottom:1.6rem;
+    max-width:660px;
+    opacity:0; animation:hIn 1s 0.4s var(--ease) forwards;
+}
+.hero__title em { font-style:italic; color:var(--gold-2); }
+.hero__sub {
+    font-size:0.88rem; font-weight:300;
+    letter-spacing:0.05em; line-height:1.85;
+    color:rgba(255,255,255,0.72);
+    max-width:420px;
+    margin-bottom:2.8rem;
+    opacity:0; animation:hIn 1s 0.6s var(--ease) forwards;
+}
+.hero__ctas {
+    display:flex; gap:1rem; flex-wrap:wrap;
+    opacity:0; animation:hIn 1s 0.8s var(--ease) forwards;
+}
+/* Slide dots */
+.hero__dots {
+    position:absolute; bottom:2.8rem; right:6%;
+    z-index:12; display:flex; gap:0.5rem; align-items:center;
+}
+.dot {
+    width:22px; height:1.5px;
+    background:rgba(255,255,255,0.3);
+    border:none; cursor:pointer;
+    border-radius:1px;
+    transition:background 0.4s, width 0.4s;
+}
+.dot.active { background:var(--gold-1); width:44px; }
+/* Scroll cue */
+.hero__scroll {
+    position:absolute; bottom:2.8rem; left:50%; transform:translateX(-50%);
+    z-index:12; display:flex; flex-direction:column; align-items:center; gap:6px;
+    opacity:0; animation:hIn 0.8s 1.2s ease forwards;
+}
+.hero__scroll span {
+    font-size:0.56rem; letter-spacing:0.28em;
+    text-transform:uppercase; color:rgba(255,255,255,0.42);
+}
+.scroll-bar {
+    width:1px; height:44px;
+    background:linear-gradient(to bottom,rgba(200,162,84,0.7),transparent);
+    animation:scrollPulse 2.2s 1.6s ease-in-out infinite;
+}
+@keyframes hIn { from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)} }
+@keyframes scrollPulse { 0%,100%{opacity:.5;transform:scaleY(1)}50%{opacity:1;transform:scaleY(1.12)} }
+
+/* ─── BUTTONS ─── */
+.btn-gold {
+    display:inline-flex; align-items:center; gap:0.6rem;
+    padding:0.95rem 2.2rem;
+    background:var(--gold-1);
+    color:var(--ink);
+    font-size:0.72rem; font-weight:600;
+    letter-spacing:0.2em; text-transform:uppercase;
+    border-radius:1px;
+    transition:background 0.3s, transform 0.3s var(--ease), box-shadow 0.3s;
+}
+.btn-gold:hover {
+    background:var(--gold-2);
+    transform:translateY(-2px);
+    box-shadow:0 10px 28px rgba(200,162,84,0.42);
+}
+.btn-gold svg { width:14px; height:14px; stroke:currentColor; fill:none; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
+.btn-outline {
+    display:inline-flex; align-items:center; gap:0.6rem;
+    padding:0.95rem 2.2rem;
+    border:1px solid rgba(255,255,255,0.36);
+    color:#fff;
+    font-size:0.72rem; font-weight:400;
+    letter-spacing:0.2em; text-transform:uppercase;
+    border-radius:1px;
+    transition:border-color 0.3s, background 0.3s, transform 0.3s;
+}
+.btn-outline:hover {
+    border-color:var(--gold-1);
+    background:rgba(200,162,84,0.1);
+    transform:translateY(-2px);
+}
+.btn-teal {
+    display:inline-flex; align-items:center; gap:0.6rem;
+    padding:0.95rem 2.2rem;
+    background:var(--teal);
+    color:#fff;
+    font-size:0.72rem; font-weight:500;
+    letter-spacing:0.2em; text-transform:uppercase;
+    border-radius:1px;
+    transition:background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.btn-teal:hover {
+    background:var(--teal-dk);
+    transform:translateY(-2px);
+    box-shadow:0 10px 28px rgba(58,96,104,0.35);
+}
+.btn-teal svg { width:14px; height:14px; stroke:currentColor; fill:none; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
+
+/* ═══════════════════════════════════════════════════════════
+   MARQUEE TRUST STRIP
+═══════════════════════════════════════════════════════════ */
+.marquee-strip {
+    background:var(--teal-dk);
+    overflow:hidden;
+    padding:0.9rem 0;
+    border-top:1px solid rgba(200,162,84,0.14);
+    border-bottom:1px solid rgba(200,162,84,0.14);
+}
+.marquee-track {
+    display:flex; width:max-content;
+    animation:marquee 30s linear infinite;
+}
+.marquee-item {
+    display:flex; align-items:center; gap:1rem;
+    padding:0 2.4rem; white-space:nowrap;
+}
+.marquee-item span {
+    font-size:0.65rem; font-weight:500;
+    letter-spacing:0.26em; text-transform:uppercase;
+    color:var(--gold-2);
+}
+.marquee-diamond {
+    width:5px; height:5px;
+    background:var(--gold-1);
+    transform:rotate(45deg);
+    flex-shrink:0;
+}
+@keyframes marquee { from{transform:translateX(0)}to{transform:translateX(-50%)} }
+
+/* ═══════════════════════════════════════════════════════════
+   OFFERS BANNER
+═══════════════════════════════════════════════════════════ */
+.offers { line-height:0; }
+.offers img { width:100%; height:auto; }
+.offers .d { display:block; }
+.offers .m { display:none; }
+
+/* ═══════════════════════════════════════════════════════════
+   SECTION COMMONS
+═══════════════════════════════════════════════════════════ */
+.sec { padding:6.5rem 5%; }
+.sec--ivory   { background:var(--ivory); }
+.sec--ivory2  { background:var(--ivory2); }
+.sec--teal    { background:var(--teal-dk); }
+.sec--stone   { background:var(--ink-2); }
+
+.sec-head { text-align:center; margin-bottom:4rem; }
+.sec-eye {
+    font-size:0.63rem; font-weight:500;
+    letter-spacing:0.34em; text-transform:uppercase;
+    color:var(--gold-4); margin-bottom:1rem;
+    display:block;
+}
+.sec-eye--light { color:var(--gold-2); }
+.sec-title {
+    font-family:var(--serif);
+    font-size:clamp(2rem,4.5vw,3.6rem);
+    font-weight:400; line-height:1.1;
+    color:var(--ink-2); letter-spacing:0.02em;
+}
+.sec-title--light { color:var(--gold-3); }
+.sec-rule {
+    width:48px; height:1px;
+    background:var(--gold-1);
+    margin:1.4rem auto 0;
+}
+.sec-sub {
+    margin-top:1.1rem;
+    font-size:0.88rem; font-weight:300;
+    color:var(--muted); letter-spacing:0.03em;
+}
+.sec-sub--light { color:rgba(245,230,191,0.5); }
+
+/* ═══════════════════════════════════════════════════════════
+   ESSENCE / ABOUT
+═══════════════════════════════════════════════════════════ */
+.essence { padding:7rem 5%; background:var(--ivory2); }
+.essence__inner {
+    max-width:820px; margin:0 auto;
+    text-align:center;
+}
+.essence__ornament {
+    display:flex; align-items:center; justify-content:center;
+    gap:0.9rem; margin-bottom:2.6rem;
+}
+.essence__ornament-line {
+    width:60px; height:1px;
+    background:linear-gradient(to right,transparent,var(--gold-1));
+}
+.essence__ornament-line.rev { background:linear-gradient(to left,transparent,var(--gold-1)); }
+.essence__ornament-diamond {
+    width:7px; height:7px;
+    background:var(--gold-1);
+    transform:rotate(45deg);
+}
+.essence__quote {
+    font-family:var(--serif);
+    font-size:clamp(1.55rem,3.2vw,2.6rem);
+    font-weight:300;
+    line-height:1.45;
+    color:var(--ink-2);
+    margin-bottom:2rem;
+    letter-spacing:0.01em;
+}
+.essence__quote em { font-style:italic; color:var(--gold-4); }
+.essence__body {
+    font-size:0.9rem; font-weight:300;
+    line-height:1.9; color:var(--muted);
+    max-width:600px; margin:0 auto;
+}
+/* Trust badges row */
+.essence__badges {
+    display:flex; justify-content:center;
+    gap:2.4rem; margin-top:3.2rem; flex-wrap:wrap;
+}
+.badge {
+    display:flex; flex-direction:column; align-items:center; gap:0.5rem;
+}
+.badge__icon {
+    width:44px; height:44px;
+    border:1px solid rgba(139,107,47,0.25);
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+}
+.badge__icon svg {
+    width:22px; height:22px;
+    fill:none; stroke:var(--gold-1);
+    stroke-width:1.4; stroke-linecap:round; stroke-linejoin:round;
+}
+.badge__label {
+    font-size:0.6rem; font-weight:500;
+    letter-spacing:0.2em; text-transform:uppercase;
+    color:var(--gold-4);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   COLLECTION — Asymmetric Editorial Grid
+═══════════════════════════════════════════════════════════ */
+.collection { padding:6.5rem 5%; background:var(--ivory); }
+.collection__head {
+    display:flex; justify-content:space-between; align-items:flex-end;
+    border-bottom:1px solid rgba(139,107,47,0.14);
+    padding-bottom:2rem; margin-bottom:3.5rem;
+    gap:2rem; flex-wrap:wrap;
+}
+.collection__head-left {}
+.collection__head-left .sec-eye { text-align:left; }
+.collection__head-title {
+    font-family:var(--serif);
+    font-size:clamp(2.2rem,5vw,4rem);
+    font-weight:400;
+    color:var(--ink-2);
+    line-height:1.0;
+}
+.collection__cta {
+    display:inline-flex; align-items:center; gap:0.5rem;
+    font-size:0.72rem; font-weight:500;
+    letter-spacing:0.18em; text-transform:uppercase;
+    color:var(--teal);
+    padding-bottom:3px;
+    border-bottom:1px solid var(--teal);
+    transition:color 0.3s, border-color 0.3s;
+    flex-shrink:0;
+}
+.collection__cta:hover { color:var(--gold-4); border-color:var(--gold-4); }
+.collection__cta svg { width:14px; height:14px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+
+/* Asymmetric grid — inspired by Indian jewellery lookbooks */
+.col-grid {
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    grid-template-rows:auto;
+    gap:1.5rem;
+    max-width:1380px; margin:0 auto;
+}
+.col-item {
+    position:relative; overflow:hidden;
+    background:var(--ink-2); cursor:pointer;
+}
+.col-item:nth-child(1){ grid-column:1/8;  grid-row:1; height:72vh; }
+.col-item:nth-child(2){ grid-column:8/13; grid-row:1; height:44vh; margin-top:10vh; }
+.col-item:nth-child(3){ grid-column:1/5;  grid-row:2; height:52vh; }
+.col-item:nth-child(4){ grid-column:5/13; grid-row:2; height:60vh; }
+
+.col-img {
+    width:100%; height:100%;
+    object-fit:cover;
+    transition:transform 1.4s var(--ease), filter 1s ease;
+    filter:brightness(0.88) saturate(0.92);
+}
+.col-item:hover .col-img {
+    transform:scale(1.06);
+    filter:brightness(0.72) saturate(0.85);
+}
+/* Shimmer border */
+.col-item::after {
+    content:''; position:absolute; inset:0;
+    border:1.5px solid transparent;
+    transition:border-color 0.5s;
+    pointer-events:none; z-index:2;
+}
+.col-item:hover::after { border-color:rgba(200,162,84,0.5); }
+
+.col-overlay {
+    position:absolute; inset:0; z-index:1;
+    background:linear-gradient(to top,rgba(10,7,3,0.82) 0%,rgba(10,7,3,0.22) 50%,transparent 100%);
+    display:flex; flex-direction:column; justify-content:flex-end;
+    padding:2rem 1.8rem;
+    transition:background 0.5s;
+}
+.col-item:hover .col-overlay {
+    background:linear-gradient(to top,rgba(10,7,3,0.9) 0%,rgba(10,7,3,0.5) 60%,rgba(10,7,3,0.08) 100%);
+}
+.col-kicker {
+    font-size:0.58rem; font-weight:500;
+    letter-spacing:0.28em; text-transform:uppercase;
+    color:var(--gold-1); margin-bottom:0.4rem;
+}
+.col-name {
+    font-family:var(--serif);
+    font-size:clamp(1.4rem,3vw,2.2rem);
+    font-weight:400; color:#fff;
+    line-height:1.1; margin-bottom:1.2rem;
+}
+.col-btn {
+    display:inline-flex; align-items:center; gap:0.5rem;
+    padding:0.65rem 1.4rem;
+    border:1px solid rgba(200,162,84,0.5);
+    color:var(--gold-2);
+    font-size:0.68rem; font-weight:500;
+    letter-spacing:0.16em; text-transform:uppercase;
+    border-radius:1px;
+    align-self:flex-start;
+    opacity:0; transform:translateY(14px);
+    transition:opacity 0.4s var(--ease), transform 0.4s var(--ease), background 0.3s, color 0.3s;
+}
+.col-btn svg { width:14px; height:14px; fill:currentColor; }
+.col-item:hover .col-btn { opacity:1; transform:translateY(0); }
+.col-btn:hover { background:var(--gold-1); border-color:var(--gold-1); color:var(--ink); }
+
+/* ═══════════════════════════════════════════════════════════
+   TRUST / WHY CHOOSE US
+   Teal-dark background echoing the shop facade
+═══════════════════════════════════════════════════════════ */
+.trust { padding:6.5rem 5%; background:var(--teal-dk); }
+.trust__grid {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1.5px;
+    max-width:1380px; margin:3.5rem auto 0;
+}
+.trust__card {
+    padding:3rem 2rem;
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(200,162,84,0.1);
+    text-align:center;
+    transition:background 0.4s, border-color 0.4s, transform 0.4s var(--ease);
+}
+.trust__card:hover {
+    background:rgba(255,255,255,0.07);
+    border-color:rgba(200,162,84,0.38);
+    transform:translateY(-6px);
+}
+.trust__icon {
+    width:54px; height:54px;
+    margin:0 auto 1.6rem;
+    border:1px solid rgba(200,162,84,0.24);
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+}
+.trust__icon svg {
+    width:26px; height:26px;
+    fill:none; stroke:var(--gold-1);
+    stroke-width:1.3; stroke-linecap:round; stroke-linejoin:round;
+}
+.trust__name {
+    font-family:var(--serif);
+    font-size:1.3rem; font-weight:500;
+    color:var(--gold-3);
+    letter-spacing:0.03em; margin-bottom:0.9rem;
+}
+.trust__text {
+    font-size:0.83rem; font-weight:300;
+    line-height:1.85; letter-spacing:0.02em;
+    color:rgba(255,255,255,0.58);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   TESTIMONIAL PULL-QUOTE
+═══════════════════════════════════════════════════════════ */
+.testimonial {
+    padding:6rem 5%;
+    background:var(--ivory2);
+    text-align:center;
+}
+.testimonial__inner { max-width:800px; margin:0 auto; }
+.testimonial__mark {
+    font-family:var(--serif);
+    font-size:4rem; line-height:1;
+    color:var(--gold-1); opacity:0.5;
+    margin-bottom:1.4rem;
+}
+.testimonial__quote {
+    font-family:var(--serif);
+    font-size:clamp(1.3rem,2.8vw,2rem);
+    font-style:italic; font-weight:400;
+    line-height:1.5; color:var(--ink-2);
+    margin-bottom:2rem;
+}
+.testimonial__author {
+    font-size:0.65rem; font-weight:500;
+    letter-spacing:0.3em; text-transform:uppercase;
+    color:var(--gold-4);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   BOUTIQUE / CONTACT
+   Stone-texture feel using dark background + glass card
+═══════════════════════════════════════════════════════════ */
+.boutique {
+    position:relative;
+    min-height:90vh;
+    display:flex; align-items:center;
+    overflow:hidden;
+    background:var(--ink-2);
+}
+.boutique__bg {
+    position:absolute; inset:0; z-index:1;
+}
+.boutique__bg img {
+    width:100%; height:100%;
+    object-fit:cover;
+    filter:grayscale(20%) brightness(0.38) saturate(0.7);
+    transition:transform 8s ease;
+}
+.boutique:hover .boutique__bg img { transform:scale(1.04); }
+
+/* Warm stone veil on right */
+.boutique__veil {
+    position:absolute; inset:0; z-index:2; pointer-events:none;
+    background:linear-gradient(to right,rgba(16,12,7,0.12) 0%,rgba(16,12,7,0.72) 100%);
+}
+
+.boutique__inner {
+    position:relative; z-index:3;
+    width:100%; max-width:1380px;
+    margin:0 auto; padding:5rem 5%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:5rem; align-items:center;
+}
+
+/* Left: decorative shop image panel */
+.boutique__visual {
+    position:relative;
+}
+.boutique__img-frame {
+    width:100%;
+    aspect-ratio:3/4;
+    overflow:hidden;
+    border:1px solid rgba(200,162,84,0.22);
+}
+.boutique__img-frame img {
+    width:100%; height:100%;
+    object-fit:cover;
+    transition:transform 1.2s var(--ease);
+}
+.boutique__visual:hover .boutique__img-frame img { transform:scale(1.04); }
+.boutique__badge {
+    position:absolute;
+    bottom:-1.5rem; left:-1.5rem;
+    width:110px; height:110px;
+    background:var(--gold-1);
+    display:flex; flex-direction:column;
+    align-items:center; justify-content:center; gap:2px;
+    text-align:center;
+}
+.boutique__badge-num {
+    font-family:var(--serif);
+    font-size:2.2rem; font-weight:400;
+    color:var(--ink); line-height:1;
+}
+.boutique__badge-label {
+    font-size:0.5rem; font-weight:600;
+    letter-spacing:0.2em; text-transform:uppercase;
+    color:var(--ink-2);
+}
+
+/* Right: contact card */
+.boutique__card {
+    background:rgba(253,250,243,0.92);
+    backdrop-filter:blur(24px);
+    -webkit-backdrop-filter:blur(24px);
+    border:1px solid rgba(255,255,255,0.5);
+    padding:3.5rem;
+    box-shadow:0 40px 80px rgba(0,0,0,0.25);
+}
+.boutique__card-title {
+    font-family:var(--serif);
+    font-size:clamp(1.8rem,3.5vw,2.8rem);
+    font-weight:400; color:var(--ink-2);
+    margin-bottom:2.4rem;
+    letter-spacing:0.02em;
+}
+.boutique__card-title em { font-style:italic; color:var(--teal); }
+.contact-rows { display:flex; flex-direction:column; gap:1.8rem; }
+.contact-row { display:flex; gap:1.2rem; align-items:flex-start; }
+.contact-row__icon {
+    width:40px; height:40px;
+    flex-shrink:0;
+    border:1px solid rgba(139,107,47,0.22);
+    display:flex; align-items:center; justify-content:center;
+}
+.contact-row__icon svg {
+    width:18px; height:18px;
+    fill:none; stroke:var(--gold-1);
+    stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round;
+}
+.contact-row__label {
+    font-size:0.58rem; font-weight:600;
+    letter-spacing:0.26em; text-transform:uppercase;
+    color:var(--gold-4); margin-bottom:0.4rem;
+    display:block;
+}
+.contact-row__val {
+    font-size:0.92rem; font-weight:300;
+    line-height:1.8; color:var(--ink-2);
+}
+.contact-row__val a {
+    color:var(--teal); font-weight:500;
+    border-bottom:1px solid transparent;
+    transition:color 0.3s, border-color 0.3s;
+}
+.contact-row__val a:hover { color:var(--gold-4); border-color:var(--gold-1); }
+.boutique__card-ctas {
+    display:flex; gap:1rem; flex-wrap:wrap; margin-top:2.4rem;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════════════════ */
+.footer {
+    background:var(--ink);
+    padding:3.5rem 5%;
+    display:flex;
+    align-items:center; justify-content:space-between;
+    gap:1.5rem; flex-wrap:wrap;
+}
+.footer__wordmark {
+    font-family:var(--serif);
+    font-size:clamp(2rem,8vw,5.5rem);
+    font-weight:300; line-height:1;
+    color:rgba(255,255,255,0.06);
+    letter-spacing:0.08em;
+    pointer-events:none; user-select:none;
+}
+.footer__copy {
+    font-size:0.75rem; font-weight:300;
+    letter-spacing:0.06em; color:rgba(255,255,255,0.35);
+    text-align:right;
+    line-height:1.9;
+}
+.footer__copy a {
+    color:rgba(200,162,84,0.7);
+    transition:color 0.3s;
+}
+.footer__copy a:hover { color:var(--gold-1); }
+
+/* ═══════════════════════════════════════════════════════════
+   WHATSAPP FLOAT
+═══════════════════════════════════════════════════════════ */
+.wa-float {
+    position:fixed;
+    bottom:2rem; right:2rem;
+    z-index:800;
+}
+.wa-float a {
+    display:flex; align-items:center; justify-content:center;
+    width:56px; height:56px;
+    background:var(--teal);
+    border-radius:50%;
+    box-shadow:0 8px 24px rgba(38,63,69,0.4);
+    transition:transform 0.3s var(--ease), background 0.3s, box-shadow 0.3s;
+}
+.wa-float a:hover {
+    transform:scale(1.1) translateY(-3px);
+    background:#25D366;
+    box-shadow:0 12px 34px rgba(37,211,102,0.45);
+}
+.wa-float svg { width:28px; height:28px; fill:#fff; }
+
+/* ═══════════════════════════════════════════════════════════
+   SCROLL REVEAL
+═══════════════════════════════════════════════════════════ */
+.reveal {
+    opacity:0; transform:translateY(36px);
+    transition:opacity 0.85s var(--ease), transform 0.85s var(--ease);
+}
+.reveal.in { opacity:1; transform:translateY(0); }
+.r2 { transition-delay:0.1s; }
+.r3 { transition-delay:0.2s; }
+.r4 { transition-delay:0.3s; }
+.r5 { transition-delay:0.4s; }
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════════════════ */
+@media (max-width:1100px) {
+    .trust__grid { grid-template-columns:repeat(2,1fr); }
+    .col-item:nth-child(1){ grid-column:1/8; height:55vh; }
+    .col-item:nth-child(2){ grid-column:8/13; height:40vh; margin-top:8vh; }
+    .col-item:nth-child(3){ grid-column:1/5; height:44vh; }
+    .col-item:nth-child(4){ grid-column:5/13; height:50vh; }
+    .boutique__inner { grid-template-columns:1fr; gap:3rem; }
+    .boutique__visual { display:none; }
+}
+@media (max-width:768px) {
+    .header { height:68px; }
+    .hero { margin-top:68px; min-height:540px; }
+    .nav-links, .nav-socials { display:none; }
+    .menu-btn { display:flex; }
+    .col-grid {
+        display:flex; flex-direction:column;
+    }
+    .col-item { height:65vw !important; margin-top:0 !important; }
+    .trust__grid { grid-template-columns:1fr; }
+    .boutique__card { padding:2rem 1.5rem; }
+    .footer { flex-direction:column; align-items:flex-start; }
+    .footer__copy { text-align:left; }
+    .offers .d { display:none; }
+    .offers .m { display:block; }
+    .hero__scroll { display:none; }
+    .hero__dots { bottom:1.6rem; right:5%; }
+}
+@media (max-width:480px) {
+    .sec { padding:4.5rem 5%; }
+    .hero__body { padding:0 5% 5.5rem; }
+    .hero__ctas { flex-direction:column; gap:0.75rem; }
+    .essence__badges { gap:1.6rem; }
+    .col-item { height:72vw !important; }
+    .boutique__card-ctas { flex-direction:column; }
+}
     </style>
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <div class="header-container">
-            <div class="logo-section">
-                <img src="logo.jpg" alt="Priti Jewellers Logo">
-                <div class="brand-text">
-                    <h1>Priti Jewellers</h1>
-                    <div class="tagline">Brahmapuri</div>
-                </div>
-            </div>
-            
-            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
-            
-            <nav id="mainNav">
-                <a href="#">Home</a>
-                <a href="#products">Shop</a>
-                <a href="#why-us">Why Us</a>
-                <a href="#contact">Contact</a>
-                
-                <div class="social-links">
-                    <a href="https://www.instagram.com/pritijewellers_/" target="_blank" class="social-btn instagram-btn" title="Follow us on Instagram">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.849.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4 2.21 0 4 1.791 4 4 0 2.21-1.79 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                        </svg>
-                    </a>
-                    
-                    <a href="https://maps.app.goo.gl/jUm1XK8BQJjejLZB6" target="_blank" class="social-btn maps-btn" title="Find us on Google Maps">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                        </svg>
-                    </a>
-                </div>
-            </nav>
-        </div>
-    </header>
+<!-- ═══ PRELOADER ═══ -->
+<div id="preloader" role="status" aria-label="Loading Priti Jewellers">
+    <div class="pre-logo"><img src="logo.png" alt="Priti Jewellers Emblem"></div>
+    <p class="pre-name"><span>Priti Jewellers</span></p>
+    <div class="pre-rule"></div>
+    <p class="pre-city">Brahmapuri</p>
+</div>
 
-    <!-- HERO SLIDESHOW -->
-    <section class="hero-section">
-        <div class="slideshow-container">
-            <div class="slide active">
-                <img src="shop1.png" alt="Priti Jewellers Brahmapuri Shop Exterior">
-            </div>
-            <div class="slide">
-                <img src="shop2.png" alt="Inside Priti Jewellers Store">
-            </div>
-            <div class="slide">
-                <img src="https://media.istockphoto.com/id/1276740597/photo/indian-traditional-gold-necklace.jpg?s=612x612&w=0&k=20&c=OYp1k0OVJObYq9hqVK_r6NwYa_W54km4nya1R-ovIUY=" alt="Traditional Gold Necklace Collection">
-            </div>
-            <div class="slide">
-                <img src="https://media.istockphoto.com/id/1203020545/photo/indian-bridal-ethnic-jewellery-gold.jpg?s=612x612&w=0&k=20&c=mBV4Ij1FaiJkx82UwrMPkkjcOvHzucP5kRG9bwAVhik=" alt="Bridal Gold Jewellery">
-            </div>
+<!-- ═══ HEADER ═══ -->
+<header class="header" id="header">
+    <a href="#" class="logo" aria-label="Priti Jewellers — Home">
+        <div class="logo__emblem" aria-hidden="true">
+            <img src="logo.jpg" alt="Priti Jewellers crest">
         </div>
-        
-        <div class="hero-overlay">
-            <h2 class="hero-title">PRITI JEWELLERS</h2>
-            <p class="hero-subtitle">100% Hallmarked Gold Jewellery, Lowest Making Charges & Complete Transparency at Priti Jewellers, Brahmapuri.</p>
-            <a href="#products" class="cta-button">Explore Collection</a>
+        <div class="logo__wordmark">
+            <span class="logo__name">Priti Jewellers</span>
+            <span class="logo__city">Brahmapuri · Sarafa Bazar</span>
         </div>
-    </section>
+    </a>
 
-    <!-- PRODUCTS SECTION -->
-    <section class="products-section" id="products">
-        <div class="section-header">
-            <h2 class="section-title">Our Collection</h2>
-            <p class="section-subtitle">Handcrafted Excellence in Every Piece</p>
-        </div>
-        
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1601121141418-c1caa10a2a0b?q=80&w=1170&auto=format&fit=crop" alt="Gold Necklace Designs">
-                </div>
-                <div class="product-content">
-                    <h3>Gold Necklace</h3>
-                    <button class="order-btn" onclick="window.open('https://wa.me/919422839306?text=I%20want%20Gold%20Necklace', '_blank')">Order on WhatsApp</button>
-                </div>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1598560917807-1bae44bd2be8?q=80&w=880&auto=format&fit=crop" alt="Certified Diamond Rings">
-                </div>
-                <div class="product-content">
-                    <h3>Diamond Ring</h3>
-                    <button class="order-btn" onclick="window.open('https://wa.me/919422839306?text=I%20want%20Diamond%20Ring', '_blank')">Order on WhatsApp</button>
-                </div>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1651160670627-2896ddf7822f?q=80&w=768&auto=format&fit=crop" alt="Gold Earrings Collection">
-                </div>
-                <div class="product-content">
-                    <h3>Gold Earrings</h3>
-                    <button class="order-btn" onclick="window.open('https://wa.me/919422839306?text=I%20want%20Gold%20Earrings', '_blank')">Order on WhatsApp</button>
-                </div>
-            </div>
-        </div>
-    </section>
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
 
-    <!-- WHY CHOOSE US -->
-    <section class="why-us-section" id="why-us">
-        <div class="section-header">
-            <h2 class="section-title">Why Choose Priti Jewellers?</h2>
-            <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.8);">Your Trust is Our Foundation</p>
-        </div>
-        
-        <div class="features-container">
-            <div class="features-track">
-                <!-- First set -->
-                <div class="feature-card">
-                    
-                    <h3>HUID & BIS Hallmark</h3>
-                    <p>Every piece carries authentic HUID and BIS Hallmark ensuring highest purity standards.</p>
-                </div>
-                
-                <div class="feature-card">
-                    
-                    <h3>100% Transparency</h3>
-                    <p>Clear pricing with complete breakdown of gold rate, making charges, and all applicable taxes.</p>
-                </div>
-                
-                <div class="feature-card">
-                    
-                    <h3>Guaranteed Buyback</h3>
-                    <p>Fair and transparent buyback policy on all jewellery purchased from our store.</p>
-                </div>
-                
-                <div class="feature-card">
-                    
-                    <h3>Lifetime Exchange</h3>
-                    <p>Enjoy lifetime exchange facility with minimal charges and a completely hassle-free process.</p>
-                </div>
-                
-                <!-- Duplicate set for seamless loop -->
-                <div class="feature-card">
-                    
-                    <h3>HUID & BIS Hallmark</h3>
-                    <p>Every piece carries authentic HUID and BIS Hallmark ensuring highest purity standards.</p>
-                </div>
-                
-                <div class="feature-card">
-                    
-                    <h3>100% Transparency</h3>
-                    <p>Clear pricing with complete breakdown of gold rate, making charges, and all applicable taxes.</p>
-                </div>
-                
-                <div class="feature-card">
-                    
-                    <h3>Guaranteed Buyback</h3>
-                    <p>Fair and transparent buyback policy on all jewellery purchased from our store.</p>
-                </div>
-                
-                <div class="feature-card">
-                    
-                    <h3>Lifetime Exchange</h3>
-                    <p>Enjoy lifetime exchange facility with minimal charges and a completely hassle-free process.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <ul class="nav-links" role="list">
+        <li><a href="#"          class="nav-link">Home</a></li>
+        <li><a href="#collection" class="nav-link">Collection</a></li>
+        <li><a href="#why-us"    class="nav-link">Why Us</a></li>
+        <li><a href="#boutique"  class="nav-link">Visit Us</a></li>
+    </ul>
 
-    <!-- CONTACT SECTION -->
-    <section class="contact-section" id="contact">
-        <div class="section-header">
-            <h2 class="section-title">Visit Our Store</h2>
-            <p class="section-subtitle">We're Located in the Heart of Brahmapuri</p>
+    <div class="nav-socials" aria-label="Social links">
+        <a href="https://www.instagram.com/pritijewellers_/" target="_blank" rel="noopener" class="soc-icon soc-icon--ig" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.849.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4 2.21 0 4 1.791 4 4 0 2.21-1.79 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://maps.app.goo.gl/jUm1XK8BQJjejLZB6" target="_blank" rel="noopener" class="soc-icon soc-icon--map" aria-label="Google Maps">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+        </a>
+    </div>
+</header>
+
+<!-- ═══ MOBILE NAV ═══ -->
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
+    <ul class="mobile-nav__links" role="list">
+        <li><a href="#"           class="mobile-nav__link">Home</a></li>
+        <li><a href="#collection"  class="mobile-nav__link">Collection</a></li>
+        <li><a href="#why-us"     class="mobile-nav__link">Why Us</a></li>
+        <li><a href="#boutique"   class="mobile-nav__link">Visit Us</a></li>
+    </ul>
+    <span class="mobile-nav__city">Sarafa Bazar · Brahmapuri</span>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="hero" aria-label="Welcome to Priti Jewellers">
+    <div class="slideshow" id="slideshow" aria-hidden="true">
+        <div class="slide active">
+            <img src="shop1.png" alt="Priti Jewellers storefront" loading="eager">
         </div>
-        
-        <section class="section" id="contact">
-    <h2>Visit Our Heritage Store</h2>
-    <div class="contact-flex">
-        <div class="contact-info">
-            <p><strong>📍 Address</strong><br>Sarafa Bazar Road, Gujri Ward, Churhe Bada, Brahmapuri, Maharashtra - 441206</p>
-            <p><strong>📞 Phone / WhatsApp</strong><br>+91 94228 39306, +91 94041 66299</p>
-            <p><strong>⏰ Store Hours</strong><br>Mon-Sat: 10:30 AM – 8:30 PM<br>Sunday: 11:00 AM – 6:00 PM</p>
-            <p><strong>✉️ Custom Orders</strong><br>DM us on Instagram or WhatsApp</p>
+        <div class="slide">
+            <img src="shop2.png" alt="Priti Jewellers interior" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src="https://media.istockphoto.com/id/1276740597/photo/indian-traditional-gold-necklace.jpg?s=612x612&w=0&k=20&c=OYp1k0OVJObYq9hqVK_r6NwYa_W54km4nya1R-ovIUY=" alt="Traditional gold necklace" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src="https://media.istockphoto.com/id/1203020545/photo/indian-bridal-ethnic-jewellery-gold.jpg?s=612x612&w=0&k=20&c=mBV4Ij1FaiJkx82UwrMPkkjcOvHzucP5kRG9bwAVhik=" alt="Bridal gold jewellery" loading="lazy">
+        </div>
+    </div>
+    <div class="hero__veil" aria-hidden="true"></div>
+
+    <div class="hero__body">
+        <div class="hero__kicker">
+            <div class="hero__kicker-line"></div>
+            <span>Sarafa Bazar · Brahmapuri</span>
+        </div>
+        <h1 class="hero__title">
+            Where Gold<br>Becomes <em>Heritage</em>
+        </h1>
+        <p class="hero__sub">
+            HUID &amp; BIS Hallmarked gold, certified diamonds, and bespoke jewellery crafted for every cherished occasion. Guaranteed purity. Complete transparency.
+        </p>
+        <div class="hero__ctas">
+            <a href="#collection" class="btn-gold">
+                Explore Collection
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#boutique" class="btn-outline">Visit Our Store</a>
+        </div>
+    </div>
+
+    <div class="hero__dots" id="heroDots" aria-label="Slideshow navigation" aria-hidden="true">
+        <button class="dot active" data-i="0"></button>
+        <button class="dot" data-i="1"></button>
+        <button class="dot" data-i="2"></button>
+        <button class="dot" data-i="3"></button>
+    </div>
+    <div class="hero__scroll" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-bar"></div>
+    </div>
+</section>
+
+<!-- ═══ MARQUEE ═══ -->
+<div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+        <div class="marquee-item"><span>HUID Hallmarked Gold</span><div class="marquee-diamond"></div></div>
+        <div class="marquee-item"><span>BIS Certified Purity</span><div class="marquee-diamond"></div></div>
+        <div class="marquee-item"><span>Certified Diamonds</span><div class="marquee-diamond"></div></div>
+        <div class="marquee-item"><span>Guaranteed Buyback</span><div class="marquee-diamond"></div></div>
+        <div class="marquee-item"><span>Lifetime Exchange</span><div class="marquee-diamond"></div></div>
+        <div class="marquee-item"><span>Lowest Making Charges</span><div class="marquee-diamond"></div></div>
+        <div class="marquee-item"><span>100% Transparent Pricing</span><div class="marquee-diamond"></div></div>
+        <div class="marquee-item"><span>Custom Orders Welcome</span><div class="marquee-diamond"></div></div>
+        <!-- duplicate -->
+        <div class="marquee-item"><span>HUID Hallmarked Gold</span><div class="marquee-diamond"></div></div>
+        <div class="marquee-item"><span>BIS Certified Purity</span><div class="marquee-diamond"></div></div>
+        <div class="marquee-item"><span>Certified Diamonds</span><div class="marquee-diamond"></div></div>
+        <div class="marquee-item"><span>Guaranteed Buyback</span><div class="marquee-diamond"></div></div>
+        <div class="marquee-item"><span>Lifetime Exchange</span><div class="marquee-diamond"></div></div>
+        <div class="marquee-item"><span>Lowest Making Charges</span><div class="marquee-diamond"></div></div>
+        <div class="marquee-item"><span>100% Transparent Pricing</span><div class="marquee-diamond"></div></div>
+        <div class="marquee-item"><span>Custom Orders Welcome</span><div class="marquee-diamond"></div></div>
+    </div>
+</div>
+
+<!-- ═══ OFFERS BANNER ═══ -->
+<div class="offers">
+    <img class="d" src="offer-desktop.jpg" alt="Priti Jewellers current offers and promotions" loading="lazy">
+    <img class="m" src="offer-mobile.jpg"  alt="Priti Jewellers current offers and promotions" loading="lazy">
+</div>
+
+<!-- ═══ ESSENCE / ABOUT ═══ -->
+<section class="essence" id="heritage">
+    <div class="essence__inner">
+        <div class="essence__ornament reveal">
+            <div class="essence__ornament-line"></div>
+            <div class="essence__ornament-diamond"></div>
+            <div class="essence__ornament-line rev"></div>
+        </div>
+        <h2 class="essence__quote reveal r2">
+            For generations, we have transformed<br><em>pure gold and rare diamonds</em><br>into heirlooms of enduring trust.
+        </h2>
+        <p class="essence__body reveal r3">
+            Every piece at Priti Jewellers carries HUID registration and BIS Hallmark certification — the government's seal of purity. Our transparent pricing ensures you know exactly what you pay for, down to the last rupee.
+        </p>
+        <div class="essence__badges reveal r4">
+            <div class="badge">
+                <div class="badge__icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+                </div>
+                <span class="badge__label">BIS Hallmark</span>
+            </div>
+            <div class="badge">
+                <div class="badge__icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <span class="badge__label">HUID Certified</span>
+            </div>
+            <div class="badge">
+                <div class="badge__icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10h18M3 14h18M10 3v18M14 3v18"/></svg>
+                </div>
+                <span class="badge__label">Transparent Pricing</span>
+            </div>
+            <div class="badge">
+                <div class="badge__icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4v16h16M4 14l4-4 4 4 4-5 4 3"/></svg>
+                </div>
+                <span class="badge__label">Buyback Guaranteed</span>
+            </div>
+            <div class="badge">
+                <div class="badge__icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <span class="badge__label">Lifetime Exchange</span>
+            </div>
         </div>
     </div>
 </section>
 
-
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2026 Priti Jewellers Brahmapuri • All Rights Reserved</p>
-    </footer>
-
-    <!-- WHATSAPP FLOAT BUTTON -->
-    <div class="whatsapp-float">
-        <a href="https://wa.me/919404166299" target="_blank" title="Chat with us on WhatsApp">
-            <svg viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.485-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.522-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.571-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                <path d="M12 2C6.48 2 2 6.59 2 12.253c0 2.1.64 4.05 1.738 5.66L2 22l4.19-1.1c1.56.85 3.32 1.3 5.11 1.3 5.52 0 10-4.59 10-10.253C22 6.59 17.52 2 12 2zm0 18.5c-1.45 0-2.86-.4-4.07-1.15L4.5 20.5l1.2-3.48C4.7 15.3 4 13.8 4 12.25 4 7.7 7.7 4 12 4s8 3.7 8 8.25c0 4.55-3.7 8.25-8 8.25z"/>
-            </svg>
+<!-- ═══ COLLECTION ═══ -->
+<section class="collection" id="collection">
+    <div class="collection__head reveal">
+        <div class="collection__head-left">
+            <span class="sec-eye">Handcrafted in Gold &amp; Diamond</span>
+            <h2 class="collection__head-title">Our Collection</h2>
+        </div>
+        <a href="https://wa.me/919422839306?text=I%20want%20to%20see%20your%20collection" target="_blank" rel="noopener" class="collection__cta">
+            Enquire on WhatsApp
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
         </a>
     </div>
 
-    <script>
-        // Slideshow functionality
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-        
-        function showSlide(index) {
-            slides.forEach(slide => slide.classList.remove('active'));
-            slides[index].classList.add('active');
-        }
-        
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }
-        
-        setInterval(nextSlide, 4000);
-        
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
+    <div class="col-grid">
+        <!-- 1 -->
+        <article class="col-item reveal">
+            <img class="col-img" src="https://images.unsplash.com/photo-1601121141418-c1caa10a2a0b?q=80&w=1170&auto=format&fit=crop" alt="Gold necklace designs at Priti Jewellers" loading="lazy" width="780" height="1040">
+            <div class="col-overlay">
+                <span class="col-kicker">Gold Collection</span>
+                <h3 class="col-name">Gold<br>Necklace</h3>
+                <button class="col-btn" onclick="window.open('https://wa.me/919422839306?text=I%20am%20interested%20in%20a%20Gold%20Necklace','_blank')" aria-label="Enquire about Gold Necklace">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.485-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.522-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.571-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.48 2 2 6.59 2 12.253c0 2.1.64 4.05 1.738 5.66L2 22l4.19-1.1c1.56.85 3.32 1.3 5.11 1.3 5.52 0 10-4.59 10-10.253C22 6.59 17.52 2 12 2zm0 18.5c-1.45 0-2.86-.4-4.07-1.15L4.5 20.5l1.2-3.48C4.7 15.3 4 13.8 4 12.25 4 7.7 7.7 4 12 4s8 3.7 8 8.25c0 4.55-3.7 8.25-8 8.25z"/></svg>
+                    Enquire
+                </button>
+            </div>
+        </article>
+        <!-- 2 -->
+        <article class="col-item reveal r2">
+            <img class="col-img" src="https://images.unsplash.com/photo-1598560917807-1bae44bd2be8?q=80&w=880&auto=format&fit=crop" alt="Certified diamond ring" loading="lazy" width="880" height="1173">
+            <div class="col-overlay">
+                <span class="col-kicker">Diamond Collection</span>
+                <h3 class="col-name">Diamond<br>Ring</h3>
+                <button class="col-btn" onclick="window.open('https://wa.me/919422839306?text=I%20am%20interested%20in%20a%20Diamond%20Ring','_blank')" aria-label="Enquire about Diamond Ring">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.485-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.522-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.571-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.48 2 2 6.59 2 12.253c0 2.1.64 4.05 1.738 5.66L2 22l4.19-1.1c1.56.85 3.32 1.3 5.11 1.3 5.52 0 10-4.59 10-10.253C22 6.59 17.52 2 12 2zm0 18.5c-1.45 0-2.86-.4-4.07-1.15L4.5 20.5l1.2-3.48C4.7 15.3 4 13.8 4 12.25 4 7.7 7.7 4 12 4s8 3.7 8 8.25c0 4.55-3.7 8.25-8 8.25z"/></svg>
+                    Enquire
+                </button>
+            </div>
+        </article>
+        <!-- 3 -->
+        <article class="col-item reveal r3">
+            <img class="col-img" src="https://images.unsplash.com/photo-1651160670627-2896ddf7822f?q=80&w=768&auto=format&fit=crop" alt="Gold earrings collection" loading="lazy" width="768" height="1024">
+            <div class="col-overlay">
+                <span class="col-kicker">Gold Collection</span>
+                <h3 class="col-name">Gold<br>Earrings</h3>
+                <button class="col-btn" onclick="window.open('https://wa.me/919422839306?text=I%20am%20interested%20in%20Gold%20Earrings','_blank')" aria-label="Enquire about Gold Earrings">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.485-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.522-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.571-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.48 2 2 6.59 2 12.253c0 2.1.64 4.05 1.738 5.66L2 22l4.19-1.1c1.56.85 3.32 1.3 5.11 1.3 5.52 0 10-4.59 10-10.253C22 6.59 17.52 2 12 2zm0 18.5c-1.45 0-2.86-.4-4.07-1.15L4.5 20.5l1.2-3.48C4.7 15.3 4 13.8 4 12.25 4 7.7 7.7 4 12 4s8 3.7 8 8.25c0 4.55-3.7 8.25-8 8.25z"/></svg>
+                    Enquire
+                </button>
+            </div>
+        </article>
+        <!-- 4 -->
+        <article class="col-item reveal r4">
+            <img class="col-img" src="https://media.istockphoto.com/id/1203020545/photo/indian-bridal-ethnic-jewellery-gold.jpg?s=612x612&w=0&k=20&c=mBV4Ij1FaiJkx82UwrMPkkjcOvHzucP5kRG9bwAVhik=" alt="Bridal gold jewellery collection" loading="lazy">
+            <div class="col-overlay">
+                <span class="col-kicker">Bridal Collection</span>
+                <h3 class="col-name">Bridal<br>Jewellery</h3>
+                <button class="col-btn" onclick="window.open('https://wa.me/919422839306?text=I%20am%20interested%20in%20Bridal%20Jewellery','_blank')" aria-label="Enquire about Bridal Jewellery">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.485-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.522-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.571-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.48 2 2 6.59 2 12.253c0 2.1.64 4.05 1.738 5.66L2 22l4.19-1.1c1.56.85 3.32 1.3 5.11 1.3 5.52 0 10-4.59 10-10.253C22 6.59 17.52 2 12 2zm0 18.5c-1.45 0-2.86-.4-4.07-1.15L4.5 20.5l1.2-3.48C4.7 15.3 4 13.8 4 12.25 4 7.7 7.7 4 12 4s8 3.7 8 8.25c0 4.55-3.7 8.25-8 8.25z"/></svg>
+                    Enquire
+                </button>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- ═══ WHY CHOOSE US ═══ -->
+<section class="trust" id="why-us">
+    <div class="sec-head reveal">
+        <span class="sec-eye sec-eye--light">Our Promise to You</span>
+        <h2 class="sec-title sec-title--light">Why Priti Jewellers</h2>
+        <div class="sec-rule"></div>
+        <p class="sec-sub sec-sub--light">Your trust is our most precious ornament</p>
+    </div>
+
+    <div class="trust__grid">
+        <div class="trust__card reveal r2">
+            <div class="trust__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+            </div>
+            <h3 class="trust__name">HUID &amp; BIS Hallmark</h3>
+            <p class="trust__text">Every piece carries authentic HUID registration and BIS Hallmark — the government's guarantee of gold purity you can trust absolutely.</p>
+        </div>
+        <div class="trust__card reveal r3">
+            <div class="trust__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="trust__name">100% Transparency</h3>
+            <p class="trust__text">Clear, itemised pricing with a full breakdown of gold rate, making charges, wastage, and all applicable taxes. No surprises, ever.</p>
+        </div>
+        <div class="trust__card reveal r4">
+            <div class="trust__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="trust__name">Guaranteed Buyback</h3>
+            <p class="trust__text">Return any piece purchased from our store and receive a fair, transparent buyback value — no questions, no hidden deductions.</p>
+        </div>
+        <div class="trust__card reveal r5">
+            <div class="trust__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="trust__name">Lifetime Exchange</h3>
+            <p class="trust__text">Upgrade, refresh, or redesign your jewellery at any time with our hassle-free lifetime exchange — a commitment for every generation.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ TESTIMONIAL ═══ -->
+<section class="testimonial">
+    <div class="testimonial__inner">
+        <div class="testimonial__mark reveal" aria-hidden="true">&#10077;</div>
+        <blockquote class="testimonial__quote reveal r2">
+            Priti Jewellers does not simply craft jewellery — they weave dreams into gold. Their transparency and dedication to purity are truly unparalleled in Brahmapuri.
+        </blockquote>
+        <cite class="testimonial__author reveal r3">— Verified Customer </cite>
+    </div>
+</section>
+
+<!-- ═══ BOUTIQUE / CONTACT ═══ -->
+<section class="boutique" id="boutique">
+    <div class="boutique__bg" aria-hidden="true">
+        <img src="shop2.png" alt="" loading="lazy"
+             onerror="this.src='https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=1200&auto=format&fit=crop'">
+    </div>
+    <div class="boutique__veil" aria-hidden="true"></div>
+
+    <div class="boutique__inner">
+        <!-- Decorative panel (hidden on mobile) -->
+        <div class="boutique__visual reveal">
+            <div class="boutique__img-frame">
+                <img src="shop1.png" alt="Priti Jewellers store entrance"
+                     onerror="this.src='https://images.unsplash.com/photo-1601121141418-c1caa10a2a0b?q=80&w=800&auto=format&fit=crop'">
+            </div>
+            <div class="boutique__badge" aria-hidden="true">
+                <span class="boutique__badge-num">22K</span>
+                <span class="boutique__badge-label">Pure Gold</span>
+            </div>
+        </div>
+
+        <!-- Contact card -->
+        <div class="boutique__card reveal r2">
+            <h2 class="boutique__card-title">Visit <em>Our Store</em></h2>
+
+            <div class="contact-rows">
+                <div class="contact-row">
+                    <div class="contact-row__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+                    </div>
+                    <div>
+                        <span class="contact-row__label">Address</span>
+                        <p class="contact-row__val">Sarafa Bazar Road, <br> Brahmapuri,<br>Maharashtra — 441206</p>
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <div class="contact-row__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+                    </div>
+                    <div>
+                        <span class="contact-row__label">Phone / WhatsApp</span>
+                        <p class="contact-row__val">
+                            <a href="tel:+919422839306">+91 94228 39306</a><br>
+                            <a href="tel:+919404166299">+91 94041 66299</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <div class="contact-row__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <div>
+                        <span class="contact-row__label">Store Hours</span>
+                        <p class="contact-row__val">
+                            Mon – Sat &nbsp;10:30 AM – 8:30 PM<br>
+                            Sunday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11:00 AM – 6:00 PM
+                        </p>
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <div class="contact-row__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                    </div>
+                    <div>
+                        <span class="contact-row__label">Custom Orders</span>
+                        <p class="contact-row__val">
+                            DM on <a href="https://www.instagram.com/pritijewellers_/" target="_blank" rel="noopener">Instagram</a> or WhatsApp for bespoke enquiries
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="boutique__card-ctas">
+                <a href="https://wa.me/919404166299" target="_blank" rel="noopener" class="btn-teal">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.485-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.522-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.571-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.48 2 2 6.59 2 12.253c0 2.1.64 4.05 1.738 5.66L2 22l4.19-1.1c1.56.85 3.32 1.3 5.11 1.3 5.52 0 10-4.59 10-10.253C22 6.59 17.52 2 12 2zm0 18.5c-1.45 0-2.86-.4-4.07-1.15L4.5 20.5l1.2-3.48C4.7 15.3 4 13.8 4 12.25 4 7.7 7.7 4 12 4s8 3.7 8 8.25c0 4.55-3.7 8.25-8 8.25z"/></svg>
+                    Chat on WhatsApp
+                </a>
+                <a href="https://maps.app.goo.gl/jUm1XK8BQJjejLZB6" target="_blank" rel="noopener" class="btn-gold">
+                    Get Directions
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+    <div class="footer__wordmark" aria-hidden="true">प्रिती ज्वैलर्स</div>
+    <p class="footer__copy">
+        &copy; 2026 Priti Jewellers, Brahmapuri. All rights reserved.<br>
+        <a href="https://maps.app.goo.gl/jUm1XK8BQJjejLZB6" target="_blank" rel="noopener">Sarafa Bazar Road, Brahmapuri — 441206</a>
+    </p>
+</footer>
+
+<!-- ═══ WHATSAPP FLOAT ═══ -->
+<div class="wa-float" aria-label="WhatsApp chat button">
+    <a href="https://wa.me/919404166299" target="_blank" rel="noopener" aria-label="Chat with Priti Jewellers on WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.485-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.522-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.571-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 2C6.48 2 2 6.59 2 12.253c0 2.1.64 4.05 1.738 5.66L2 22l4.19-1.1c1.56.85 3.32 1.3 5.11 1.3 5.52 0 10-4.59 10-10.253C22 6.59 17.52 2 12 2zm0 18.5c-1.45 0-2.86-.4-4.07-1.15L4.5 20.5l1.2-3.48C4.7 15.3 4 13.8 4 12.25 4 7.7 7.7 4 12 4s8 3.7 8 8.25c0 4.55-3.7 8.25-8 8.25z"/>
+        </svg>
+    </a>
+</div>
+
+<script>
+(function () {
+    'use strict';
+
+    /* ── Preloader ── */
+    var pre = document.getElementById('preloader');
+    document.body.style.overflow = 'hidden';
+    setTimeout(function () {
+        pre.classList.add('done');
+        document.body.style.overflow = '';
+        // Fire initial reveal check after preloader
+        setTimeout(checkReveals, 100);
+    }, 2000);
+
+    /* ── Slideshow ── */
+    var slides   = document.querySelectorAll('.slide');
+    var dots     = document.querySelectorAll('.dot');
+    var current  = 0;
+    var ssTimer;
+
+    function goTo(n) {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (n + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+    }
+    function next() { goTo(current + 1); }
+    function startSS() { ssTimer = setInterval(next, 4800); }
+    function resetSS()  { clearInterval(ssTimer); startSS(); }
+
+    startSS();
+    dots.forEach(function (d) {
+        d.addEventListener('click', function () { goTo(+this.dataset.i); resetSS(); });
+    });
+
+    /* ── Header scroll ── */
+    var header = document.getElementById('header');
+    window.addEventListener('scroll', function () {
+        header.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    /* ── Mobile nav ── */
+    var menuBtn   = document.getElementById('menuBtn');
+    var mobileNav = document.getElementById('mobileNav');
+
+    function closeNav() {
+        mobileNav.classList.remove('open');
+        menuBtn.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        mobileNav.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+    menuBtn.addEventListener('click', function () {
+        var isOpen = mobileNav.classList.toggle('open');
+        menuBtn.classList.toggle('open', isOpen);
+        menuBtn.setAttribute('aria-expanded', String(isOpen));
+        mobileNav.setAttribute('aria-hidden', String(!isOpen));
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+    mobileNav.querySelectorAll('.mobile-nav__link').forEach(function (l) {
+        l.addEventListener('click', closeNav);
+    });
+
+    /* ── Smooth scroll (offset for fixed header) ── */
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+        a.addEventListener('click', function (e) {
+            var id = this.getAttribute('href');
+            if (id === '#') return;
+            var target = document.querySelector(id);
+            if (!target) return;
+            e.preventDefault();
+            var offset = header.offsetHeight + 20;
+            var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+            closeNav();
+        });
+    });
+
+    /* ── Scroll reveal ── */
+    function checkReveals() {
+        document.querySelectorAll('.reveal:not(.in)').forEach(function (el) {
+            var r = el.getBoundingClientRect();
+            if (r.top < window.innerHeight * 0.88) {
+                el.classList.add('in');
             }
         });
-        
-        // Mobile menu toggle
-        function toggleMenu() {
-            const nav = document.getElementById('mainNav');
-            nav.classList.toggle('active');
-        }
-        
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    // Close mobile menu if open
-                    if (window.innerWidth <= 968) {
-                        document.getElementById('mainNav').classList.remove('active');
-                    }
-                }
+    }
+
+    if ('IntersectionObserver' in window) {
+        var obs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+                if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
             });
-        });
-    </script>
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(function (el) { obs.observe(el); });
+    } else {
+        window.addEventListener('scroll', checkReveals, { passive: true });
+        checkReveals();
+    }
+
+})();
+</script>
 </body>
 </html>
