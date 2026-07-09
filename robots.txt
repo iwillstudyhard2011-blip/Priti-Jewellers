@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pritijewellers.github.io/Priti-Jewellers/sitemap.xml
+Sitemap: https://priti-jewellers.pages.dev/sitemap.xml
